@@ -46,7 +46,7 @@ public abstract class EnemigoLejos extends Enemigo {
 				//Dispara si hay enemigo, sino camina en caso de que la siguiente celda este vacia
 				if (encontre && x>0) {
 					crearDisparo();
-					cooldown = 2.5f;
+					cooldown = 10;
 					jl.setIcon(atacar);
 				}
 				else {
@@ -67,7 +67,7 @@ public abstract class EnemigoLejos extends Enemigo {
 				}
 			}
 			else {
-				cooldown -= 0.125;
+				cooldown -= 1;
 			}
 		}		
 	}

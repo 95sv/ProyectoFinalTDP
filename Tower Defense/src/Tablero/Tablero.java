@@ -25,7 +25,7 @@ import Torres.Torre;
 public class Tablero {
 	
 	private static Tablero instance;
-	private static int MONEDAS_INCIAL = 200;
+	private static int MONEDAS_INCIAL = 2000;
 	
 	private Mapa mapa;
 	private Collection<Torre> jugadores; 

@@ -33,7 +33,7 @@ public abstract class EnemigoCerca extends Enemigo {
 					jl.setIcon(atacar);
 				}
 				else {
-					jl.setIcon(icon);
+					jl.setIcon(icon); // AL DOPE
 				}
 			}
 			else {
