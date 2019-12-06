@@ -1,0 +1,12 @@
+Controles
+--------------------
+Para crear una torre o un objeto, se hace click izquierdo en el botón para activarlo y luego click izquierdo en el mapa para crearlo.
+No se pueden poner torres en las primeras tres columnas del mapa donde aparecen los enemigos.
+Para vender una torre, se debe hacer click derecho sobre ella. No se pueden vender objetos, solo torres.
+
+
+Oleadas
+--------------------
+Cada oleada dura 30 segundos con un descanso de 10 segundos entre cada una.
+En cada oleada aparecen más enemigos que en la anterior.
+Hay 3 oleadas por nivel y hay 2 niveles en el juego.
