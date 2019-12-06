@@ -20,7 +20,7 @@ public class Trampa extends ObjetoComprable {
 	 */
 	public Trampa(int x, int y) {
 		super(x, y, 60);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/ObjetosComprables/Trampa.png"));		
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Trampa.png"));		
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 	}

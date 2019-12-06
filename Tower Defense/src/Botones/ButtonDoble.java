@@ -21,7 +21,7 @@ public class ButtonDoble extends ButtonComprable {
 	 */
 	public ButtonDoble(ActionListener al) {
 		super(al);
-		setIcon(new ImageIcon(this.getClass().getResource("/Resources/Torres/Doble.png")));
+		setIcon(new ImageIcon(this.getClass().getResource("/Recursos/Torres/Doble.png")));
 		setToolTipText("<html> Doble <br> Torre que ocupa dos espacios <br> Daño: C <br> Velocidad: C <br> Vida: C <br> Costo: 50</html>");
 	}
 

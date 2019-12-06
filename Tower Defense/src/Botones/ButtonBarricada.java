@@ -16,7 +16,7 @@ public class ButtonBarricada extends ButtonComprable {
 	 */
 	public ButtonBarricada(ActionListener al) {
 		super(al);
-        setIcon(new ImageIcon(this.getClass().getResource("/Resources/ObjetosComprables/Pared.png")));
+        setIcon(new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Pared.png")));
         setToolTipText("<html> Barricada <br> Obstaculo destructible <br> Vida: C <br> Costo: 15 </html>");
 	}	
 	

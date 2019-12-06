@@ -15,7 +15,7 @@ public class Verde extends Torre {
 	 */
 	public Verde(int x, int y) {
 		super(x, y, 60, 15, 10, 45);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Torres/Verde.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/Verde.png"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

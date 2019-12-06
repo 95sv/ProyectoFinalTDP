@@ -13,9 +13,9 @@ public class Orco extends EnemigoCerca {
 	 */
 	public Orco(int x, int y) {
 		super(x, y, 100, 20, 4, 50);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Orco.png"));
-		atacar = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Orco_a.gif"));
-		mover = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Orco_c.gif"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Orco.png"));
+		atacar = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Orco_a.gif"));
+		mover = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Orco_c.gif"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

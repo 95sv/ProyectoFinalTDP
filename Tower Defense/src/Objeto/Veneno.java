@@ -23,7 +23,7 @@ public class Veneno extends ObjetoComprable {
 	 */
 	public Veneno(int x, int y) {
 		super(x, y, 20);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/ObjetosComprables/Veneno.png"));		
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Veneno.png"));		
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 	}

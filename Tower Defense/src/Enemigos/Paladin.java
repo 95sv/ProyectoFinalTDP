@@ -13,9 +13,9 @@ public class Paladin extends EnemigoCerca {
 	 */
 	public Paladin(int x, int y) {
 		super(x, y, 50, 10, 4, 20);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Paladin.png"));
-		atacar = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Paladin_a.gif"));
-		mover = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Paladin_c.gif"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Paladin.png"));
+		atacar = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Paladin_a.gif"));
+		mover = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Paladin_c.gif"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

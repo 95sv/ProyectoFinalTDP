@@ -18,7 +18,7 @@ public class Lago extends Objeto {
 	 */
 	public Lago(int x, int y) {
 		super(x, y);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Objetos/Lago.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Objetos/Lago.png"));
 		jl = new JLabel(icon);		
 	}
 	

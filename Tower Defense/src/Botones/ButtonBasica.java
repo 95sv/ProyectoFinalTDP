@@ -17,7 +17,7 @@ public class ButtonBasica extends ButtonComprable {
 	 */
 	public ButtonBasica(ActionListener al) {
 		super(al);
-        setIcon(new ImageIcon(this.getClass().getResource("/Resources/Torres/Basica.png")));
+        setIcon(new ImageIcon(this.getClass().getResource("/Recursos/Torres/Basica.png")));
         setToolTipText("<html>Torre Basica <br> Daño: C <br> Velocidad: C <br> Vida: C <br> Costo: 30</html>");
 	}
 	

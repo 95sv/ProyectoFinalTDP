@@ -18,7 +18,7 @@ public class Hielo extends PowerUpInstantaneo {
 	 */
 	public Hielo(int x, int y) {
 		super(x, y);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/PowerUps/Hielo.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUps/Hielo.png"));
 		jl = new LabelPowerUpInstantaneo(this, icon);
 		jl.addMouseListener(new UsarPowerUpInstantaneoListener());
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);

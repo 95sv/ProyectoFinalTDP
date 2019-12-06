@@ -19,7 +19,7 @@ public class Nivel1 extends Mapa {
 	 */
 	public Nivel1() {
 		super();
-		icon = new ImageIcon(this.getClass().getResource("/Resources/grass_background.jpg"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/grass_background.jpg"));
 		Random rnd = new Random();
 		int x;
 		int y;

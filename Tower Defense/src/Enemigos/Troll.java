@@ -13,9 +13,9 @@ public class Troll extends EnemigoCerca {
 	 */
 	public Troll(int x, int y) {
 		super(x, y, 250, 30, 2, 70);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Troll.png"));
-		atacar = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Troll_a.gif"));
-		mover = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Troll_c.gif"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Troll.png"));
+		atacar = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Troll_a.gif"));
+		mover = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Troll_c.gif"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

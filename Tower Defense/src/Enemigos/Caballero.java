@@ -13,9 +13,9 @@ public class Caballero extends EnemigoCerca {
 	 */
 	public Caballero(int x, int y) {
 		super(x, y, 20, 5, 8, 10);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Caballero.png"));
-		atacar = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Caballero_a.gif"));
-		mover = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Caballero_c.gif"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Caballero.png"));
+		atacar = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Caballero_a.gif"));
+		mover = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Caballero_c.gif"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

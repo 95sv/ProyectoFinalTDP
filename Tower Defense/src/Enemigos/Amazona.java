@@ -13,9 +13,9 @@ public class Amazona extends EnemigoCerca {
 	 */
 	public Amazona(int x, int y) {
 		super(x, y, 40, 10, 12, 15);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Amazona.png"));
-		atacar = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Amazona_a.gif"));
-		mover = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Amazona_c.gif"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Amazona.png"));
+		atacar = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Amazona_a.gif"));
+		mover = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Amazona_c.gif"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

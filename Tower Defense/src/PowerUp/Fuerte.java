@@ -17,7 +17,7 @@ public class Fuerte extends PowerUpTiempo {
 	 */
 	public Fuerte(int x, int y) {
 		super(x, y);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/PowerUps/Fuerza.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUps/Fuerza.png"));
 		jl = new LabelPowerUpTiempo(this, icon);
 		jl.addMouseListener(new UsarPowerUpTiempoListener());
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);

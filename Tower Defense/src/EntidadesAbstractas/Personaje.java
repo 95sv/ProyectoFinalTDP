@@ -120,7 +120,7 @@ public abstract class Personaje extends Entidad {
 	 * Se agrega la barra de vida al personaje. Esta operación se utiliza al crear el personaje.
 	 */
 	protected void addLifeBar() {
-		lifeBar = new JLabel(new ImageIcon(this.getClass().getResource("/Resources/BarraVida.png")));
+		lifeBar = new JLabel(new ImageIcon(this.getClass().getResource("/Recursos/BarraVida.png")));
 		jl.add(lifeBar);
 		updateLifeBar();
 	}

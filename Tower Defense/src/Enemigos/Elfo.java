@@ -15,9 +15,9 @@ public class Elfo extends EnemigoLejos {
 	 */
 	public Elfo(int x, int y) {
 		super(x, y, 50, 10, 4, 20, 3);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Elfo.png"));
-		atacar = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Elfo_a.gif"));
-		mover = new ImageIcon(this.getClass().getResource("/Resources/Enemigos/Elfo_c.gif"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Elfo.png"));
+		atacar = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Elfo_a.gif"));
+		mover = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Elfo_c.gif"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		cooldown = 0;

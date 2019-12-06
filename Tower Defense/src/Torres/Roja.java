@@ -15,7 +15,7 @@ public class Roja extends Torre {
 	 */
 	public Roja(int x, int y) {
 		super(x, y, 20, 30, 14, 50);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Torres/Rojo.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/Rojo.png"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

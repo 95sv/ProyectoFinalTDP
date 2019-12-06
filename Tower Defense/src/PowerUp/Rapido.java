@@ -17,7 +17,7 @@ public class Rapido extends PowerUpTiempo {
 	 */
 	public Rapido(int x, int y) {
 		super(x, y);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/PowerUps/Velocidad.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUps/Velocidad.png"));
 		jl = new LabelPowerUpTiempo(this, icon);
 		jl.addMouseListener(new UsarPowerUpTiempoListener());
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);

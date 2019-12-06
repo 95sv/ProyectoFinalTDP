@@ -15,7 +15,7 @@ public class TorreBasica extends Torre {
 	 */
 	public TorreBasica(int x, int y) {
 		super(x, y, 50, 10, 8, 30);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Torres/Basica.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/Basica.png"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

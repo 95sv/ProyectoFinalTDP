@@ -22,7 +22,7 @@ public class Fuego extends ObjetoComprable {
 	public Fuego(int x, int y) {
 		super(x, y, 20);
 		daño = 10;
-		icon = new ImageIcon(this.getClass().getResource("/Resources/ObjetosComprables/Fuego.png"));		
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Fuego.png"));		
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 	}

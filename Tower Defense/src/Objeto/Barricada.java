@@ -22,7 +22,7 @@ public class Barricada extends ObjetoComprable {
 	public Barricada(int x, int y) {
 		super(x, y, 15);
 		vida = 50;
-		icon = new ImageIcon(this.getClass().getResource("/Resources/ObjetosComprables/Pared.png"));		
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Pared.png"));		
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 	}

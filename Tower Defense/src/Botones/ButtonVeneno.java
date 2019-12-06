@@ -18,7 +18,7 @@ public class ButtonVeneno extends ButtonComprable {
 	 */
 	public ButtonVeneno(ActionListener al) {
 		super(al);
-        setIcon(new ImageIcon(this.getClass().getResource("/Resources/ObjetosComprables/Veneno.png")));
+        setIcon(new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Veneno.png")));
         setToolTipText("<html> Veneno <br> Se activa con contacto enemigo <br> Daño: C <br> Tiempo: 5 seg <br> Costo: 20 </html>");
 	}	
 	

@@ -15,7 +15,7 @@ public class TorrePesada extends Torre {
 	 */
 	public TorrePesada(int x, int y) {
 		super(x, y, 150, 20, 6, 45);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Torres/Pesada.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/Pesada.png"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

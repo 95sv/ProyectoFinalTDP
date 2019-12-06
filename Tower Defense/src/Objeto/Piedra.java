@@ -22,7 +22,7 @@ public class Piedra extends Objeto {
 	public Piedra(int x, int y) {
 		super(x, y);
 		vida = 25;
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Objetos/Piedra.png"));		
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Objetos/Piedra.png"));		
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 	}

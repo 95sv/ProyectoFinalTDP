@@ -15,7 +15,7 @@ public class Azul extends Torre {
 	 */
 	public Azul(int x, int y) {
 		super(x, y, 30, 15, 10, 35);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Torres/Azul.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/Azul.png"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();

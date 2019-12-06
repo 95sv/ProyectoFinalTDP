@@ -18,7 +18,7 @@ public class ButtonRoja extends ButtonComprable {
 	 */
 	public ButtonRoja(ActionListener al) {
 		super(al);
-        setIcon(new ImageIcon(this.getClass().getResource("/Resources/Torres/Rojo.png")));
+        setIcon(new ImageIcon(this.getClass().getResource("/Recursos/Torres/Rojo.png")));
         setToolTipText("<html> Torre Roja <br> Daño: A+ <br> Velocidad: A <br> Vida: D <br> Costo: 50 </html");
 	}
 	
