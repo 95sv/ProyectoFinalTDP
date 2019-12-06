@@ -19,7 +19,7 @@ public class DisparoAzul extends DisparoAliado {
 	 */
 	public DisparoAzul(int x, int y, float daño, int velocidad) {
 		super(x, y, daño, velocidad);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Disparos/4.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Disparos/4.png"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 	}

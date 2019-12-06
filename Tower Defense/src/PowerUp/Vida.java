@@ -18,7 +18,7 @@ public class Vida extends PowerUpInstantaneo {
 	 */
 	public Vida(int x, int y) {
 		super(x, y);
-		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUps/Vida.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Vida.png"));
 		jl = new LabelPowerUpInstantaneo(this, icon);
 		jl.addMouseListener(new UsarPowerUpInstantaneoListener());
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);

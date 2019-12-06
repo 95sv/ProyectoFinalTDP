@@ -17,7 +17,7 @@ public class Escudo extends PowerUpTiempo {
 	 */
 	public Escudo(int x, int y) {
 		super(x, y);
-		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUps/Escudo.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Escudo.png"));
 		jl = new LabelPowerUpTiempo(this, icon);
 		jl.addMouseListener(new UsarPowerUpTiempoListener());
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);

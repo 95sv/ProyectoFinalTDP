@@ -151,7 +151,7 @@ public abstract class Personaje extends Entidad {
 	protected void updateEffect(boolean hayPU) {
 		if (effect!=null) {
 			if (hayPU) {
-				effect.setIcon(new ImageIcon(this.getClass().getResource("/Resources/PowerUpEffect.gif")));
+				effect.setIcon(new ImageIcon(this.getClass().getResource("/Recursos/PowerUpEffect.gif")));
 			}
 			else {
 				effect.setIcon(null);
