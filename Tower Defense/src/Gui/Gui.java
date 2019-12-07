@@ -85,11 +85,11 @@ public class Gui extends JFrame {
 		inventario.add(puntaje, BorderLayout.CENTER);
 				
 		//Se crean los botones de torres y comprables
-		torres.add(new ButtonBasica(new ElegirComprableListener()));
+		torres.add(new BotonTorreArena(new ElegirComprableListener()));
 		torres.add(new ButtonAvanzada(new ElegirComprableListener()));
-		torres.add(new ButtonVerde(new ElegirComprableListener()));
-		torres.add(new ButtonRoja(new ElegirComprableListener()));
-		torres.add(new ButtonAzul(new ElegirComprableListener()));
+		torres.add(new BotonTorreControl(new ElegirComprableListener()));
+		torres.add(new BotonTorreLadrillos(new ElegirComprableListener()));
+		torres.add(new BotonTorreRoca(new ElegirComprableListener()));
 		torres.add(new ButtonDoble(new ElegirComprableListener()));
 		objetos.add(new ButtonBarricada(new ElegirComprableListener()));
 		objetos.add(new ButtonTrampa(new ElegirComprableListener()));

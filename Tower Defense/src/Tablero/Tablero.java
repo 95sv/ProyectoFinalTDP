@@ -177,17 +177,17 @@ public class Tablero {
 		int r = rnd.nextInt(100);		
 		Enemigo e;
 		if (r>=0 && r<25) {
-			e = new Caballero(-Mapa.PIXEL, fila*Mapa.PIXEL);
+			e = new Corona(-Mapa.PIXEL, fila*Mapa.PIXEL);
 		} else if (r>=25 && r<45) {
-			e = new Paladin(-Mapa.PIXEL, fila*Mapa.PIXEL);
+			e = new Hielo(-Mapa.PIXEL, fila*Mapa.PIXEL);
 		} else if (r>=45 && r<65) {
-			e = new Elfo(-Mapa.PIXEL, fila*Mapa.PIXEL);
+			e = new Tierra(-Mapa.PIXEL, fila*Mapa.PIXEL);
 		} else if (r>=65 && r<85) {
-			e = new Amazona(-Mapa.PIXEL, fila*Mapa.PIXEL);
+			e = new Verde(-Mapa.PIXEL, fila*Mapa.PIXEL);
 		} else if (r>=85 && r<95) {
-			e = new Orco(-Mapa.PIXEL, fila*Mapa.PIXEL);
+			e = new Fantasma(-Mapa.PIXEL, fila*Mapa.PIXEL);
 		} else {
-			e = new Troll(-Mapa.PIXEL, fila*Mapa.PIXEL);
+			e = new Magma(-Mapa.PIXEL, fila*Mapa.PIXEL);
 		}
 		if (rnd.nextInt(9)==0) {
 			e.setPowerUp(new Escudo(-Mapa.PIXEL, fila*Mapa.PIXEL));
@@ -343,7 +343,7 @@ public class Tablero {
 			pu = new Bomba(x, y);
 		}
 		else if (r>=60 && r<75) {
-			pu = new Hielo(x, y);
+			pu = new Congelar(x, y);
 		}
 		else if (r>=75 && r<85) {
 			pu = new Vida(x, y);

@@ -3,29 +3,29 @@ package PowerUp;
 import javax.swing.ImageIcon;
 
 import Botones.LabelPowerUpInstantaneo;
-import Tablero.Tablero;
 import Mapa.Mapa;
+import Tablero.Tablero;
 
 /**
- * Power-up que destruye los enemigos de la fila donde está ubicado
+ * Power-up que congela por un tiempo a los enemigos.
  */
-public class Bomba extends PowerUpInstantaneo {
-	
+public class Congelar extends PowerUpInstantaneo {
+
 	/**
 	 * Crea un power-up.
 	 * @param x - La coordenada x del power-up
 	 * @param y - La coordenada y del power-up
 	 */
-	public Bomba(int x, int y) {
+	public Congelar(int x, int y) {
 		super(x, y);
-		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Bomba.gif"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Hielo.png"));
 		jl = new LabelPowerUpInstantaneo(this, icon);
 		jl.addMouseListener(new UsarPowerUpInstantaneoListener());
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 	}
 	
 	public void efecto() {
-		Tablero.getInstance().eliminarEnemigos(y);
+		Tablero.getInstance().congelarEnemigos(5);
 	}
 
 }

@@ -16,7 +16,7 @@ public class DobleA extends Doble {
 	 */
 	public DobleA(int x, int y) {
 		super(x, y, 50, 10, 8, 30);
-		icon = new ImageIcon(this.getClass().getResource("/Resources/Torres/DobleA.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/DobleA.png"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 	}

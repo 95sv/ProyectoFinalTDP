@@ -19,7 +19,7 @@ public class ButtonAvanzada extends ButtonComprable {
 	public ButtonAvanzada(ActionListener al) {
 		super(al);
         setIcon(new ImageIcon(this.getClass().getResource("/Recursos/Torres/Pesada.png")));
-        setToolTipText("<html> Torre Pesada <br> Daño: B <br> Velocidad: D <br> Vida: A+ <br> Costo: 45 </html");
+        //setToolTipText("<html> Torre Pesada <br> Daño: B <br> Velocidad: D <br> Vida: A+ <br> Costo: 45 </html");
 	}
 	
 	public void crearComprable(int x, int y) {

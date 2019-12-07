@@ -19,8 +19,8 @@ public class ButtonFuego extends ButtonComprable {
 	 */
 	public ButtonFuego(ActionListener al) {
 		super(al);
-		setIcon(new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Fuego.png")));
-		setToolTipText("<html> Fuego <br> Obstaculo indestructible que daña a quien lo toque <br> Daño: C <br> Tiempo: 5 seg <br> Costo: 20 </html>");
+		setIcon(new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Fuego.gif")));
+		//setToolTipText("<html> Fuego <br> Obstaculo indestructible que daña a quien lo toque <br> Daño: C <br> Tiempo: 5 seg <br> Costo: 20 </html>");
 	}
 
 	public void crearComprable(int x, int y) {
