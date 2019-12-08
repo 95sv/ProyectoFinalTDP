@@ -16,7 +16,7 @@ public class DobleB extends Doble {
 	 */
 	public DobleB(int x, int y) {
 		super(x, y, 50, 10, 8, 0);
-		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/DobleB.png"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/TorreDobleB.png"));
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();
