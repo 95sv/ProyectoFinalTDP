@@ -5,6 +5,8 @@ import javax.swing.Icon;
 import Disparo.DisparoAliado;
 import Disparo.DisparoEnemigo;
 import EntidadesAbstractas.Personaje;
+import Objeto.Agua;
+import Objeto.Objeto;
 import Tablero.Tablero;
 import Torres.Torre;
 
@@ -46,11 +48,17 @@ public abstract class Enemigo extends Personaje {
 		return false;
 	}
 	
+	
 	public boolean visit(EnemigoLejos e) {
 		return false;
 	}
 	
 	public boolean visit(DisparoEnemigo e) {
+		return false;
+	}
+	
+	public boolean visit(Objeto o) {
+		System.out.println("entre visit enemigo ");
 		return false;
 	}
 	

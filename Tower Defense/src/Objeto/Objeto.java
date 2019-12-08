@@ -1,6 +1,7 @@
 package Objeto;
 
 import Disparo.DisparoAliado;
+import Enemigos.Enemigo;
 import EntidadesAbstractas.Entidad;
 import Tablero.Tablero;
 import Torres.Torre;
@@ -28,9 +29,11 @@ public abstract class Objeto extends Entidad {
 		return false;
 	}	
 	
+	
 	public void morir() {
 		Tablero.getInstance().eliminarObjeto(this);
 	}
+	
 	
 	public void visit() {
 		//No hay interaccion

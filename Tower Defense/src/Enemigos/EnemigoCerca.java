@@ -9,6 +9,7 @@ import Tablero.Tablero;
  */
 public abstract class EnemigoCerca extends Enemigo {
 
+	protected boolean seguirMoviendo;
 	/**
 	 * Crea un enemigo.
 	 * @param x - La coordenada x del personaje
@@ -22,6 +23,8 @@ public abstract class EnemigoCerca extends Enemigo {
 		super(x, y, maxVida, daño, velocidad, valor);
 	}
 	
+	
+	
 	public void accion() {
 		if (x>=Mapa.PIXEL*Mapa.MAX_ANCHO) {
 			Tablero.getInstance().gameOver(false);
@@ -31,9 +34,13 @@ public abstract class EnemigoCerca extends Enemigo {
 			if (e!=null) {
 				if (e.visit(this)) {
 					jl.setIcon(atacar);
+					
 				}
 				else {
-					jl.setIcon(icon); // AL DOPE
+					x+= velocidad;
+					jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);		
+					jl.setIcon(mover);
+					System.out.println("Entre al primer else del e!=null(EnemigoCerca)");
 				}
 			}
 			else {
@@ -42,7 +49,9 @@ public abstract class EnemigoCerca extends Enemigo {
 				}
 				else {
 					x+= velocidad;
+					//System.out.println("entre al sumar velocidad");
 				}		
+				//System.out.println("Entre al else del entidad==null(EnemigoCerca)");
 				jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);		
 				jl.setIcon(mover);
 			}
