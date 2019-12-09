@@ -40,7 +40,6 @@ public class VisitorTorre extends Visitor{
 
 	@Override
 	public boolean visit(EnemigoCerca e) {
-		miTorre.recibirDaño(e.getDaño());
 		return true;
 	}
 
