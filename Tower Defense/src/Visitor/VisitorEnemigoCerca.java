@@ -58,14 +58,15 @@ public class VisitorEnemigoCerca extends Visitor {
 
 	@Override
 	public boolean visit(Fuego f) {
-		// TODO Auto-generated method stub
+		e.recibirDaño(f.getDaño());
 		return false;
 	}
 
 	@Override
 	public boolean visit(Barricada b) {
-		// TODO Auto-generated method stub
-		return false;
+		System.out.println("entre a barricada");
+		//b.recibirDaño(e.getDaño());
+		return true;
 	}
 
 	@Override

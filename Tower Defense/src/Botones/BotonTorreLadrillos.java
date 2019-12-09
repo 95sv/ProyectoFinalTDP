@@ -19,7 +19,7 @@ public class BotonTorreLadrillos extends ButtonComprable {
 	public BotonTorreLadrillos(ActionListener al) {
 		super(al);
         setIcon(new ImageIcon(this.getClass().getResource("/Recursos/Torres/TorreLadrillos.png")));
-        setToolTipText("<html> Torre Roja <br> Daño: A+ <br> Velocidad: A <br> Vida: D <br> Costo: 50 </html");
+        //setToolTipText("<html> Torre Roja <br> Daño: A+ <br> Velocidad: A <br> Vida: D <br> Costo: 50 </html");
 	}
 	
 	public void crearComprable(int x, int y) {

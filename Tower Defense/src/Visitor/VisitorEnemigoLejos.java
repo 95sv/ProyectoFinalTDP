@@ -55,12 +55,15 @@ public class VisitorEnemigoLejos extends Visitor{
 	}
 	@Override
 	public boolean visit(Fuego f) {
-		// TODO Auto-generated method stub
+		//System.out.println("x de fuego "+f.getX()+" x de enemigo: "+e.getX());
+		if(e.getX()+100>f.getX()) {
+		   e.recibirDaño(f.getDaño());
+		}
 		return false;
 	}
 	@Override
 	public boolean visit(Barricada b) {
-		// TODO Auto-generated method stub
+		System.out.println("entre a barricada");
 		return false;
 	}
 	@Override

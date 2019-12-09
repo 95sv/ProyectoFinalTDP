@@ -40,7 +40,10 @@ public abstract class EnemigoCerca extends Enemigo {
 					jl.setIcon(atacar);
 				}
 				else {
-					jl.setIcon(icon); 
+					//jl.setIcon(icon); 
+					x+= velocidad;
+					jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);		
+					jl.setIcon(mover);
 				}
 			}
 			else {

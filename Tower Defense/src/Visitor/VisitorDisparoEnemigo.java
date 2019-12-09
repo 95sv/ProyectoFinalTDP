@@ -65,8 +65,8 @@ public class VisitorDisparoEnemigo extends Visitor{
 	}
 	@Override
 	public boolean visit(Barricada b) {
-		// TODO Auto-generated method stub
-		return false;
+		System.out.println("entre a barricada");
+		return true;
 	}
 	@Override
 	public boolean visit(Veneno v) {
