@@ -2,7 +2,7 @@ package Enemigos;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import Disparo.DisparoVerde;
+import Disparo.DisparoTierra;
 import Mapa.Mapa;
 import Tablero.Tablero;
 import Visitor.VisitorEnemigoLejos;
@@ -30,10 +30,10 @@ public class Verde extends EnemigoLejos{
 	@Override
 	protected void crearDisparo() {
 		if (miPU!=null) {
-			Tablero.getInstance().crearDisparo(new DisparoVerde(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad*2)));
+			Tablero.getInstance().crearDisparo(new DisparoTierra(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad*2)));
 		}
 		else {
-			Tablero.getInstance().crearDisparo(new DisparoVerde(x, y, daño, velocidad*2));
+			Tablero.getInstance().crearDisparo(new DisparoTierra(x, y, daño, velocidad*2));
 		}
 		
 	}
