@@ -5,11 +5,13 @@ import javax.swing.JLabel;
 import Disparo.DisparoAzul;
 import Mapa.Mapa;
 import Tablero.Tablero;
+import Visitor.Visitor;
 
 public class TorreRoca extends Torre {
 
 	/**
 	 * Crea una torre azul.
+	 * 
 	 * @param x - La coordenada x de la torre
 	 * @param y - La coordenada y de la torre
 	 */
@@ -21,14 +23,17 @@ public class TorreRoca extends Torre {
 		addLifeBar();
 		addPUEffect();
 	}
-	
+
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
+	}
+
 	protected void crearDisparo() {
-		if (miPU!=null) {
+		if (miPU != null) {
 			Tablero.getInstance().crearDisparo(new DisparoAzul(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
-		}
-		else {
+		} else {
 			Tablero.getInstance().crearDisparo(new DisparoAzul(x, y, daño, velocidad));
-		}		
+		}
 	}
 
 }

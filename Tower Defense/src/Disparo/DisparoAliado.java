@@ -2,6 +2,8 @@ package Disparo;
 
 import EntidadesAbstractas.Entidad;
 import Tablero.Tablero;
+import Visitor.Visitor;
+import Visitor.VisitorDisparoAliado;
 import Mapa.Mapa;
 
 /**
@@ -19,6 +21,11 @@ public abstract class DisparoAliado extends Disparo {
 	 */
 	public DisparoAliado(int x, int y, float daño, int velocidad) {
 		super(x, y, daño, velocidad);
+		miVisitor = new VisitorDisparoAliado(this);
+	}
+	
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
 	}
 	
 	public void mover() {
@@ -33,7 +40,7 @@ public abstract class DisparoAliado extends Disparo {
 			e = null;
 		}
 		if (e!=null) {
-			if (e.visit(this)) { //Se visita la entidad de la celda que está "pisando" el disparo
+			if (e.aceptar(miVisitor)) { //Se visita la entidad de la celda que está "pisando" el disparo
 				Tablero.getInstance().eliminar(this);	
 			}
 			else {
@@ -43,7 +50,7 @@ public abstract class DisparoAliado extends Disparo {
 				else {
 					e = null;
 				}
-				if (e!=null && e.visit(this)) { //Se visita la entidad de la celda anterior en caso de que se haya pasado de largo el disparo
+				if (e!=null && e.aceptar(miVisitor)) { //Se visita la entidad de la celda anterior en caso de que se haya pasado de largo el disparo
 					Tablero.getInstance().eliminar(this); 
 				}
 				else {

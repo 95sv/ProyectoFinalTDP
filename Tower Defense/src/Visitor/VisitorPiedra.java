@@ -12,13 +12,12 @@ import Objeto.Trampa;
 import Objeto.Veneno;
 import Torres.Torre;
 
-public class VisitorTorre extends Visitor{
-	protected Torre miTorre;
+public class VisitorPiedra extends Visitor{
+	protected Piedra p;
 	
-	public VisitorTorre(Torre t) {
-		miTorre = t;
+	public VisitorPiedra(Piedra p) {
+		this.p = p;
 	}
-	
 	@Override
 	public boolean visit(Torre t) {
 		return false;
@@ -26,9 +25,10 @@ public class VisitorTorre extends Visitor{
 
 	@Override
 	public boolean visit(DisparoEnemigo d) {
-		miTorre.recibirDaño(d.getDaño());
-		if(miTorre.getVida()<= 0) {
-			miTorre.morir();
+		float vida = p.getVida();
+		vida -= d.getDaño();
+		if(vida<=0) {
+			p.morir();
 		}
 		return true;
 	}
@@ -40,12 +40,17 @@ public class VisitorTorre extends Visitor{
 
 	@Override
 	public boolean visit(EnemigoCerca e) {
-		miTorre.recibirDaño(e.getDaño());
+		float vida = p.getVida();
+		vida -= e.getDaño();
+		if(vida<=0) {
+			p.morir();
+		}
 		return true;
 	}
 
 	@Override
 	public boolean visit(EnemigoLejos e) {
+		
 		return true;
 	}
 
@@ -54,31 +59,26 @@ public class VisitorTorre extends Visitor{
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 	@Override
 	public boolean visit(Agua a) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 	@Override
 	public boolean visit(Fuego f) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 	@Override
 	public boolean visit(Barricada b) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 	@Override
 	public boolean visit(Veneno v) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 	@Override
 	public boolean visit(Trampa t) {
 		// TODO Auto-generated method stub

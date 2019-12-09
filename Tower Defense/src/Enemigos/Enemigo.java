@@ -2,13 +2,8 @@ package Enemigos;
 
 import java.util.Random;
 import javax.swing.Icon;
-import Disparo.DisparoAliado;
-import Disparo.DisparoEnemigo;
 import EntidadesAbstractas.Personaje;
-import Objeto.Agua;
-import Objeto.Objeto;
 import Tablero.Tablero;
-import Torres.Torre;
 
 /**
  * Un tipo de personaje que es enemigo del jugador.
@@ -43,36 +38,9 @@ public abstract class Enemigo extends Personaje {
 		x = -1; //Esto evita que trate de actualizar su posicion en el mapa
 		y = -1;
 	}
-
-	public boolean visit(EnemigoCerca e) {
-		return false;
-	}
-	
-	
-	public boolean visit(EnemigoLejos e) {
-		return false;
-	}
-	
-	public boolean visit(DisparoEnemigo e) {
-		return false;
-	}
-	
-	public boolean visit(Objeto o) {
-		System.out.println("entre visit enemigo ");
-		return false;
-	}
-	
-	public boolean visit(DisparoAliado d) {
-		recibirDaño(d.getDaño());
-		return true;
-	}
 	
 	public void visit() {
 		//No hay interaccion
-	}
-	
-	public boolean visit(Torre j) {
-		return true;
 	}
 	
 }

@@ -3,6 +3,8 @@ package Enemigos;
 import EntidadesAbstractas.Entidad;
 import Mapa.Mapa;
 import Tablero.Tablero;
+import Visitor.Visitor;
+import Visitor.VisitorEnemigoLejos;
 
 /**
  * Un tipo de enemigo que ataca de lejos. El daño que realiza es por disparo.
@@ -25,6 +27,11 @@ public abstract class EnemigoLejos extends Enemigo {
 	public EnemigoLejos(int x, int y, float maxVida, float daño, int velocidad, int valor, int alcance) {
 		super(x, y, maxVida, daño, velocidad, valor);
 		this.alcance = alcance;
+		miVisitor = new VisitorEnemigoLejos(this);
+	}
+	
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
 	}
 	
 	public void accion() {
@@ -39,7 +46,7 @@ public abstract class EnemigoLejos extends Enemigo {
 				while (!encontre && i<=alcance && (x/Mapa.PIXEL+i<=Mapa.MAX_ANCHO) && (x/Mapa.PIXEL+i>=0)) {
 					e = Tablero.getInstance().getEntidad(x/Mapa.PIXEL+i, y/Mapa.PIXEL);
 					if (e!=null) {
-						encontre = e.visit(this);
+						encontre = e.aceptar(miVisitor);
 					}	
 					i++;
 				}

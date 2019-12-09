@@ -2,9 +2,8 @@ package Objeto;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import Disparo.DisparoEnemigo;
-import Enemigos.EnemigoCerca;
-import Enemigos.EnemigoLejos;
+import Visitor.Visitor;
+import Visitor.VisitorAgua;
 
 /**
  * Objeto temporal que impide el paso a los enemigos.
@@ -20,17 +19,11 @@ public class Agua extends Objeto {
 		super(x, y);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Objetos/Agua.png"));
 		jl = new JLabel(icon);		
+		miVisitor = new VisitorAgua(this);
 	}
 	
-	public boolean visit(EnemigoCerca e) {
-		return false;
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
 	}
 	
-	public boolean visit(EnemigoLejos e) {
-		return false;
-	}
-	
-	public boolean visit(DisparoEnemigo e) {
-		return false;
-	}
 }

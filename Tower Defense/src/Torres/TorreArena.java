@@ -5,11 +5,13 @@ import javax.swing.JLabel;
 import Disparo.DisparoBasico;
 import Mapa.Mapa;
 import Tablero.Tablero;
+import Visitor.Visitor;
 
 public class TorreArena extends Torre {
-	
+
 	/**
 	 * Crea una torre básica.
+	 * 
 	 * @param x - La coordenada x de la torre
 	 * @param y - La coordenada y de la torre
 	 */
@@ -20,18 +22,19 @@ public class TorreArena extends Torre {
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();
 		addPUEffect();
-		
 	}
-	
+
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
+	}
+
 	protected void crearDisparo() {
-		if (miPU!=null) {
-			Tablero.getInstance().crearDisparo(new DisparoBasico(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
-		}
-		else {
+		if (miPU != null) {
+			Tablero.getInstance()
+					.crearDisparo(new DisparoBasico(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
+		} else {
 			Tablero.getInstance().crearDisparo(new DisparoBasico(x, y, daño, velocidad));
-		}	
+		}
 	}
-	
-	
-	
+
 }

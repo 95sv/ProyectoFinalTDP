@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 import Disparo.DisparoRojo;
 import Mapa.Mapa;
 import Tablero.Tablero;
+import Visitor.Visitor;
 
 public class TorreLadrillos extends Torre {
 	
@@ -20,6 +21,11 @@ public class TorreLadrillos extends Torre {
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();
 		addPUEffect();
+	}
+	
+
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
 	}
 	
 	protected void crearDisparo() {

@@ -1,13 +1,11 @@
 package Torres;
 
-import Disparo.DisparoAliado;
-import Disparo.DisparoEnemigo;
-import Enemigos.EnemigoCerca;
-import Enemigos.EnemigoLejos;
 import EntidadesAbstractas.Entidad;
 import EntidadesAbstractas.Personaje;
 import Mapa.Mapa;
 import Tablero.Tablero;
+import Visitor.Visitor;
+import Visitor.VisitorTorre;
 
 /**
  * Clase que representa las torres del jugador. No pueden moverse pero pueden lanzar disparos a los enemigos de la fila.
@@ -28,6 +26,11 @@ public abstract class Torre extends Personaje {
 	public Torre(int x, int y, float maxVida, float daño, int velocidad, int valor) {
 		super(x, y, maxVida, daño, velocidad, valor);
 		alcance = Mapa.MAX_ANCHO;
+		miVisitor = new VisitorTorre(this);
+	}
+	
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
 	}
 	
 	public void accion() {
@@ -37,7 +40,7 @@ public abstract class Torre extends Personaje {
 		while (!encontre && i<=alcance && (x/Mapa.PIXEL-i>=0)) {
 			e = Tablero.getInstance().getEntidad(x/Mapa.PIXEL-i, y/Mapa.PIXEL);
 			if (e!=null) {
-				encontre = e.visit(this);
+				encontre = e.aceptar(miVisitor);
 			}	
 			i++;
 		}
@@ -55,33 +58,8 @@ public abstract class Torre extends Personaje {
 	 */
 	protected abstract void crearDisparo();
 		
-	public boolean visit(EnemigoCerca e) {
-		recibirDaño(e.getDaño()/8);
-		return true;
-	}
-	
-	public boolean visit(EnemigoLejos e) {
-		return true;
-	}
-	
-	public boolean visit(DisparoAliado d) {
-		return false;
-	}
-	
-	public boolean visit(DisparoEnemigo d) {
-		recibirDaño(d.getDaño());
-		if (vida<=0) {
-			morir();
-		}
-		return true;
-	}
-	
 	public void visit() {
 		Tablero.getInstance().vender(this);
 	}
 	
-	public boolean visit(Torre j) {
-		return false;
-	}
-
 }

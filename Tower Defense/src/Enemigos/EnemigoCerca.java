@@ -3,13 +3,14 @@ package Enemigos;
 import EntidadesAbstractas.Entidad;
 import Mapa.Mapa;
 import Tablero.Tablero;
+import Visitor.Visitor;
+import Visitor.VisitorEnemigoCerca;
 
 /**
  * Un tipo de enemigo que ataca de cerca. El daño que realiza es por segundo.
  */
 public abstract class EnemigoCerca extends Enemigo {
 
-	protected boolean seguirMoviendo;
 	/**
 	 * Crea un enemigo.
 	 * @param x - La coordenada x del personaje
@@ -21,9 +22,12 @@ public abstract class EnemigoCerca extends Enemigo {
 	 */
 	public EnemigoCerca(int x, int y, float maxVida, float daño, int velocidad, int valor) {
 		super(x, y, maxVida, daño, velocidad, valor);
+		miVisitor = new VisitorEnemigoCerca(this);
 	}
 	
-	
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
+	}
 	
 	public void accion() {
 		if (x>=Mapa.PIXEL*Mapa.MAX_ANCHO) {
@@ -32,15 +36,11 @@ public abstract class EnemigoCerca extends Enemigo {
 		else {
 			Entidad e = Tablero.getInstance().getEntidad(x/Mapa.PIXEL+1, y/Mapa.PIXEL); //Entidad de la celda siguiente
 			if (e!=null) {
-				if (e.visit(this)) {
+				if (e.aceptar(miVisitor)) {
 					jl.setIcon(atacar);
-					
 				}
 				else {
-					x+= velocidad;
-					jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);		
-					jl.setIcon(mover);
-					System.out.println("Entre al primer else del e!=null(EnemigoCerca)");
+					jl.setIcon(icon); 
 				}
 			}
 			else {
@@ -49,9 +49,7 @@ public abstract class EnemigoCerca extends Enemigo {
 				}
 				else {
 					x+= velocidad;
-					//System.out.println("entre al sumar velocidad");
 				}		
-				//System.out.println("Entre al else del entidad==null(EnemigoCerca)");
 				jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);		
 				jl.setIcon(mover);
 			}

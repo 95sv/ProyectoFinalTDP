@@ -6,6 +6,8 @@ import Disparo.DisparoEnemigo;
 import Enemigos.EnemigoCerca;
 import Enemigos.EnemigoLejos;
 import Tablero.Tablero;
+import Visitor.Visitor;
+import Visitor.VisitorTrampa;
 import Mapa.Mapa;
 
 /**
@@ -23,7 +25,13 @@ public class Trampa extends ObjetoComprable {
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Trampa.png"));		
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
+		miVisitor = new VisitorTrampa(this);
 	}
+	
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
+	}
+
 
 	public boolean visit(EnemigoCerca e) {
 		e.morir();

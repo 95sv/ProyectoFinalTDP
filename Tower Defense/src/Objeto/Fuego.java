@@ -2,10 +2,9 @@ package Objeto;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import Disparo.DisparoEnemigo;
-import Enemigos.EnemigoCerca;
-import Enemigos.EnemigoLejos;
 import Mapa.Mapa;
+import Visitor.Visitor;
+import Visitor.VisitorFuego;
 
 /**
  * Obstáculo comprable temporal que daña al enemigo mas cercano. 
@@ -25,22 +24,16 @@ public class Fuego extends ObjetoComprable {
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Fuego.gif"));		
 		jl = new JLabel(icon);
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
+		miVisitor = new VisitorFuego(this);
 	}
 	
-	public boolean visit(DisparoEnemigo d) {
-		return true;
+	public float getDaño() {
+		return daño;
 	}
 
-	public boolean visit(EnemigoCerca e) {
-		e.recibirDaño(daño/8);
-		return false;
-	}
-
-	public boolean visit(EnemigoLejos e) {
-		if (x-e.getX()<=Mapa.PIXEL) {
-			e.recibirDaño(daño/8);
-		}
-		return false;
+	@Override
+	public boolean aceptar(Visitor v) {
+		return v.visit(this);
 	}
 
 }

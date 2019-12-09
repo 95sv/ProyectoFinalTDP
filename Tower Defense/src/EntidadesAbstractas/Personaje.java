@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 
 import Mapa.Mapa;
 import PowerUp.PowerUpTiempo;
+import Visitor.Visitor;
 
 /**
  * Clase que representa los personajes del juego, tanto las torres puestas por el jugador como los enemigos.
@@ -38,6 +39,12 @@ public abstract class Personaje extends Entidad {
 		this.velocidad = velocidad;
 		this.valor = valor;
 	}	
+	
+	/*
+	 * Uso de visitor.
+	 */
+	
+	public abstract boolean aceptar(Visitor v);
 	
 	/**
 	 * Retorna la vida actual del personaje

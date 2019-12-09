@@ -3,6 +3,7 @@ package Enemigos;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import Mapa.Mapa;
+import Visitor.VisitorEnemigoCerca;
 
 public class Magma extends EnemigoCerca {
 
@@ -20,5 +21,6 @@ public class Magma extends EnemigoCerca {
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);
 		addLifeBar();
 		addPUEffect();
+		miVisitor = new VisitorEnemigoCerca(this);
 	}
 }

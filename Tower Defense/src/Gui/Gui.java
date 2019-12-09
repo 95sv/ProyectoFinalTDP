@@ -228,7 +228,7 @@ public class Gui extends JFrame {
 				if (e.getButton()==MouseEvent.BUTTON3) {	
 					Entidad en = Tablero.getInstance().getEntidad(e.getX()/Mapa.PIXEL, e.getY()/Mapa.PIXEL);
 					if (en!=null) {
-						en.visit();
+						//en.visit();
 					}
 				}
 			}

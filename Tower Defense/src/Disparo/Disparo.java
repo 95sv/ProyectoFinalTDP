@@ -1,6 +1,7 @@
 package Disparo;
 
 import EntidadesAbstractas.Graficable;
+import Visitor.Visitor;
 
 /**
  * Clase que representa el disparo de un personaje.
@@ -8,7 +9,10 @@ import EntidadesAbstractas.Graficable;
  */
 
 public abstract class Disparo extends Graficable {
-
+	protected float daño;
+	protected int velocidad;	
+	protected Visitor miVisitor;
+	
 	/**
 	 * Crea un disparo en la posicion dada por parámetro.
 	 * @param x - La coordenada x del disparo
@@ -22,8 +26,7 @@ public abstract class Disparo extends Graficable {
 		this.velocidad = velocidad;
 	}
 	
-	protected float daño;
-	protected int velocidad;
+	public abstract boolean aceptar(Visitor v);
 	
 	/**
 	 * Retorna el daño del disparo

@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 import Disparo.DisparoTierra;
 import Mapa.Mapa;
 import Tablero.Tablero;
+import Visitor.VisitorEnemigoLejos;
 
 public class Tierra extends EnemigoLejos {
 
@@ -23,6 +24,7 @@ public class Tierra extends EnemigoLejos {
 		cooldown = 0;
 		addLifeBar();
 		addPUEffect();
+		miVisitor = new VisitorEnemigoLejos(this);
 	}
 	
 	protected void crearDisparo() {
