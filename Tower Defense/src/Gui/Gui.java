@@ -2,7 +2,9 @@ package Gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -44,16 +46,15 @@ public class Gui extends JFrame {
 	public Gui() {		
 		//Se genera el contentPane
 		getContentPane().setLayout(null);
-		contentPane=new JPanel();
-		setContentPane(contentPane);
-		setSize(670,630);
+		setSize(1050,470);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
-		contentPane.setSize(640, 384);
 		
 		background = new JLabel();		
+		background.setLayout(null);
+		background.setBounds(0,0,640,384);
 		background.addMouseListener(new CrearEliminarComprableListener());
-		contentPane.add(background);		
+		getContentPane().add(background);		
 		
 		cargarInventario();
 		cargarLogica();
@@ -66,40 +67,35 @@ public class Gui extends JFrame {
 	private void cargarInventario() {
 		//Se crea el panel de inventario
 		JPanel inventario = new JPanel();		
-		inventario.setLayout(new BorderLayout());			
-		contentPane.add(inventario);
+		inventario.setLayout(new GridLayout(5,2));			
+		inventario.setBounds(640, 0, 400,384);
+		inventario.setBackground(Color.BLACK);
+		getContentPane().add(inventario);
 		
-		//Paneles que estan en el inventario
-		JPanel torres = new JPanel();
-		JPanel objetos = new JPanel();
-		JPanel puntaje = new JPanel();		
-		
-		//Panel de las torres y objetos		
-		JPanel comprables = new JPanel();
-		comprables.setLayout(new BorderLayout());
-		comprables.add(torres, BorderLayout.NORTH);
-		comprables.add(objetos, BorderLayout.SOUTH);
-		
-		//Se insertan los paneles al inventario
-		inventario.add(comprables, BorderLayout.NORTH);
-		inventario.add(puntaje, BorderLayout.CENTER);
-				
+		JPanel puntaje = new JPanel();
+		puntaje.setLayout(new FlowLayout());
+		puntaje.setBounds(0, 384, 1050, 50);
+		puntaje.setBackground(Color.BLACK);
+		getContentPane().add(puntaje);
+					
 		//Se crean los botones de torres y comprables
-		torres.add(new BotonTorreArena(new ElegirComprableListener()));
-		torres.add(new ButtonAvanzada(new ElegirComprableListener()));
-		torres.add(new BotonTorreControl(new ElegirComprableListener()));
-		torres.add(new BotonTorreLadrillos(new ElegirComprableListener()));
-		torres.add(new BotonTorreRoca(new ElegirComprableListener()));
-		torres.add(new ButtonDoble(new ElegirComprableListener()));
-		objetos.add(new ButtonBarricada(new ElegirComprableListener()));
-		objetos.add(new ButtonTrampa(new ElegirComprableListener()));
-		objetos.add(new ButtonVeneno(new ElegirComprableListener()));		
-		objetos.add(new ButtonFuego(new ElegirComprableListener()));
+		inventario.add(new BotonTorreArena(new ElegirComprableListener()));
+		inventario.add(new ButtonAvanzada(new ElegirComprableListener()));
+		inventario.add(new BotonTorreControl(new ElegirComprableListener()));
+		inventario.add(new BotonTorreLadrillos(new ElegirComprableListener()));
+		inventario.add(new BotonTorreRoca(new ElegirComprableListener()));
+		inventario.add(new ButtonDoble(new ElegirComprableListener()));
+		inventario.add(new ButtonBarricada(new ElegirComprableListener()));
+		inventario.add(new ButtonTrampa(new ElegirComprableListener()));
+		inventario.add(new ButtonVeneno(new ElegirComprableListener()));		
+		inventario.add(new ButtonFuego(new ElegirComprableListener()));
 		
 		//Puntaje y monedas
 		lblPuntaje = new JLabel("Puntaje: " + Tablero.getInstance().getPuntaje());
+		lblPuntaje.setForeground(Color.YELLOW);
 		puntaje.add(lblPuntaje);
 		lblMonedas = new JLabel("Monedas: " + Tablero.getInstance().getMonedas());
+		lblMonedas.setForeground(Color.YELLOW);
 		puntaje.add(lblMonedas);	
 	}
 	
