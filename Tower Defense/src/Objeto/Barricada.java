@@ -39,4 +39,11 @@ public class Barricada extends ObjetoComprable {
 		return v.visit(this);
 	}
 
+	public void recibirDaño(float daño) {
+		vida -= daño;
+		if (vida <= 0) {
+			morir();
+		}
+	}
+	
 }

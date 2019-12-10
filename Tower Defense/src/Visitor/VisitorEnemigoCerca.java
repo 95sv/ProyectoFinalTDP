@@ -64,8 +64,8 @@ public class VisitorEnemigoCerca extends Visitor {
 
 	@Override
 	public boolean visit(Barricada b) {
-		System.out.println("entre a barricada");
-		//b.recibirDaño(e.getDaño());
+		
+		b.recibirDaño(e.getDaño());
 		return true;
 	}
 

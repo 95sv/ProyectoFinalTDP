@@ -25,11 +25,6 @@ public class VisitorBarricada extends Visitor{
 
 	@Override
 	public boolean visit(DisparoEnemigo d) {
-		float vida = b.getVida();
-		vida -= d.getDaño();
-		if(vida<=0) {
-			b.morir();
-		}
 		return true;
 	}
 
@@ -40,11 +35,7 @@ public class VisitorBarricada extends Visitor{
 
 	@Override
 	public boolean visit(EnemigoCerca e) {
-		float vida = b.getVida();
-		vida -= e.getDaño();
-		if(vida<=0) {
-			b.morir();
-		}
+		
 		return true;
 	}
 

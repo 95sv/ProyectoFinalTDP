@@ -43,30 +43,32 @@ public class VisitorEnemigoLejos extends Visitor{
 		return false;
 	}
 	
-	@Override
+	
 	public boolean visit(Piedra p) {
 		p.recibirDaño(e.getDaño());
 		return true;
 	}
-	@Override
+	
+	
 	public boolean visit(Agua a) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 	@Override
 	public boolean visit(Fuego f) {
-		//System.out.println("x de fuego "+f.getX()+" x de enemigo: "+e.getX());
+
 		if(e.getX()+100>f.getX()) {
 		   e.recibirDaño(f.getDaño());
 		}
 		return false;
 	}
-	@Override
+	
+	
 	public boolean visit(Barricada b) {
-		System.out.println("entre a barricada");
-		return false;
+		return true;
 	}
-	@Override
+	
+	
 	public boolean visit(Veneno v) {
 		// TODO Auto-generated method stub
 		return false;
