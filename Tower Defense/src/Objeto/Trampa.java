@@ -2,10 +2,6 @@ package Objeto;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import Disparo.DisparoEnemigo;
-import Enemigos.EnemigoCerca;
-import Enemigos.EnemigoLejos;
-import Tablero.Tablero;
 import Visitor.Visitor;
 import Visitor.VisitorTrampa;
 import Mapa.Mapa;

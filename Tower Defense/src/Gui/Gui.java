@@ -25,8 +25,11 @@ import Tablero.Tablero;
  */
 public class Gui extends JFrame {
 	
-	private JPanel contentPane;
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private JLabel background;
 	
 	private ButtonComprable torreElegida;
@@ -128,7 +131,7 @@ public class Gui extends JFrame {
 			btn = new JButton("Reiniciar");
 		}		
 		lbl.setFont(new Font("Serif", Font.BOLD, 48));
-		background.add(lbl);//288160
+		background.add(lbl);
 		lbl.setBounds(230, 0, 640, 384);
 		background.add(btn);
 		btn.setBounds(265, 250, 100, 32);
@@ -157,7 +160,7 @@ public class Gui extends JFrame {
 			background.setIcon(m.getIcon());
 		}
 		else {
-			contentPane.removeAll();			
+			getContentPane().removeAll();			
 		}
 		repaint();
 	}

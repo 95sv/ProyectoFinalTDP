@@ -107,7 +107,10 @@ public class Tablero {
 		gui.setBackground(mapa);
 		if (mapa!=null) {
 			crearHilos();
-		}		
+		}
+		else {
+			gameOver(true);
+		}
 	}
 	
 	/**
