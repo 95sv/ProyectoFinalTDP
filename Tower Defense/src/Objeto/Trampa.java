@@ -15,11 +15,7 @@ import Mapa.Mapa;
  */
 public class Trampa extends ObjetoComprable {
 	
-	/**
-	 * Crea un objeto comprable
-	 * @param x - La coordenada x del objeto
-	 * @param y - La coordenada y del objeto
-	 */
+	
 	public Trampa(int x, int y) {
 		super(x, y, 60);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Trampa.png"));		

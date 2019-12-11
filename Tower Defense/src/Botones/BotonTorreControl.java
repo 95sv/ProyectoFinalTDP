@@ -1,15 +1,11 @@
 package Botones;
 
 import java.awt.event.ActionListener;
-
 import javax.swing.ImageIcon;
-
 import Tablero.Tablero;
 import Torres.TorreControl;
 
-/**
- * Botón específico de la torre verde.
- */
+
 public class BotonTorreControl extends ButtonComprable {
 	
 	/**

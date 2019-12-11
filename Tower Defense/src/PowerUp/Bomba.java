@@ -11,14 +11,10 @@ import Mapa.Mapa;
  */
 public class Bomba extends PowerUpInstantaneo {
 	
-	/**
-	 * Crea un power-up.
-	 * @param x - La coordenada x del power-up
-	 * @param y - La coordenada y del power-up
-	 */
+
 	public Bomba(int x, int y) {
 		super(x, y);
-		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Bomba.gif"));
+		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Bomba2.png"));
 		jl = new LabelPowerUpInstantaneo(this, icon);
 		jl.addMouseListener(new UsarPowerUpInstantaneoListener());
 		jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);

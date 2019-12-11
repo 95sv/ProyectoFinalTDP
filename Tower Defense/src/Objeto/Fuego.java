@@ -13,11 +13,6 @@ public class Fuego extends ObjetoComprable {
 	
 	private float daño;
 
-	/**
-	 * Crea un objeto comprable
-	 * @param x - La coordenada x del objeto
-	 * @param y - La coordenada y del objeto
-	 */
 	public Fuego(int x, int y) {
 		super(x, y, 20);
 		daño = 10;

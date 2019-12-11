@@ -7,9 +7,7 @@ import javax.swing.ImageIcon;
 import Tablero.Tablero;
 import Torres.TorrePesada;
 
-/**
- * Botón específico de la torre pesada.
- */
+
 public class ButtonAvanzada extends ButtonComprable {
 
 	/**

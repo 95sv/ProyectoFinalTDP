@@ -5,9 +5,7 @@ import javax.swing.JLabel;
 
 import PowerUp.PowerUpTiempo;
 
-/**
- * Label utilizado para representar los power-up de efecto temporal.
- */
+
 public class LabelPowerUpTiempo extends JLabel {
 	
 	protected PowerUpTiempo miPU;

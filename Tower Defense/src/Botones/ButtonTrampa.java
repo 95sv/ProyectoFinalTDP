@@ -7,9 +7,7 @@ import javax.swing.ImageIcon;
 import Objeto.Trampa;
 import Tablero.Tablero;
 
-/**
- * Botón específico de la trampa
- */
+
 public class ButtonTrampa extends ButtonComprable {
 
 	/**

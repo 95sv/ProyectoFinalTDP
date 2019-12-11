@@ -13,11 +13,6 @@ public class Barricada extends ObjetoComprable {
 
 	private float vida;
 	
-	/**
-	 * Crea un objeto comprable
-	 * @param x - La coordenada x del objeto
-	 * @param y - La coordenada y del objeto
-	 */
 	public Barricada(int x, int y) {
 		super(x, y, 15);
 		vida = 50;

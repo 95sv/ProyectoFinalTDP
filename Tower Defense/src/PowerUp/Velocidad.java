@@ -8,14 +8,10 @@ import Mapa.Mapa;
 /**
  * Power-up que hace a un personaje más rápido el movimiento y/o la velocida de su disparo.
  */
-public class Rapido extends PowerUpTiempo {
+public class Velocidad extends PowerUpTiempo {
 
-	/**
-	 * Crea un power-up.
-	 * @param x - La coordenada x del power-up
-	 * @param y - La coordenada y del power-up
-	 */
-	public Rapido(int x, int y) {
+
+	public Velocidad(int x, int y) {
 		super(x, y);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Velocidad.png"));
 		jl = new LabelPowerUpTiempo(this, icon);

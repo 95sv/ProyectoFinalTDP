@@ -10,9 +10,7 @@ import Torres.Doble;
 import Torres.DobleA;
 import Torres.DobleB;
 
-/**
- * Botón específico del a torre doble.
- */
+
 public class ButtonDoble extends ButtonComprable {
 
 	/**

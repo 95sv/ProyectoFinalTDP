@@ -13,11 +13,7 @@ public class Piedra extends Objeto {
 	
 	private float vida;
 	
-	/**
-	 * Crea un objeto
-	 * @param x - La coordenada x del objeto
-	 * @param y - La coordenada y del objeto
-	 */
+
 	public Piedra(int x, int y) {
 		super(x, y);
 		vida = 25;

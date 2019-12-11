@@ -8,9 +8,7 @@ import Hilos.HiloTiempo;
 import Objeto.Fuego;
 import Tablero.Tablero;
 
-/**
- * Botón específico de fuego
- */
+
 public class ButtonFuego extends ButtonComprable {
 
 	/**

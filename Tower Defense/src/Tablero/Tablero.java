@@ -334,7 +334,7 @@ public class Tablero {
 		int r = rnd.nextInt(100);
 		PowerUp pu;
 		if (r>=0 && r<15) {
-			pu = new Rapido(x, y);
+			pu = new Velocidad(x, y);
 		}
 		else if (r>=15 && r<30) {
 			pu = new Fuerte(x, y);

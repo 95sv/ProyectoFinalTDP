@@ -11,11 +11,7 @@ import Tablero.Tablero;
  */
 public class Congelar extends PowerUpInstantaneo {
 
-	/**
-	 * Crea un power-up.
-	 * @param x - La coordenada x del power-up
-	 * @param y - La coordenada y del power-up
-	 */
+	
 	public Congelar(int x, int y) {
 		super(x, y);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Hielo.png"));

@@ -7,9 +7,7 @@ import javax.swing.ImageIcon;
 import Objeto.Veneno;
 import Tablero.Tablero;
 
-/**
- * Botón específico del veneno.
- */
+
 public class ButtonVeneno extends ButtonComprable {
 
 	/**

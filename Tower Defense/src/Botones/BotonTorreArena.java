@@ -1,15 +1,11 @@
 package Botones;
 
 import java.awt.event.ActionListener;
-
 import javax.swing.ImageIcon;
-
 import Tablero.Tablero;
 import Torres.TorreArena;
 
-/**
- * Botón específico de la torre básica.
- */
+
 public class BotonTorreArena extends ButtonComprable {
 	/**
 	 * Crea un botón comprable.

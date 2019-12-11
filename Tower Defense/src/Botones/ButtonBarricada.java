@@ -5,9 +5,6 @@ import javax.swing.ImageIcon;
 import Objeto.Barricada;
 import Tablero.Tablero;
 
-/**
- * Botón específico de la barricada
- */
 public class ButtonBarricada extends ButtonComprable {
 
 	/**

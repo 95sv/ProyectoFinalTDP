@@ -7,10 +7,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 
-/**
- * Botón que se utiliza para crear las torres y objetos comprables.
- * Cada botón muestra su información usando tooltip cuando el cursor está por encima.
- */
+
 public abstract class ButtonComprable extends JButton {
 	
 	/**
@@ -25,11 +22,7 @@ public abstract class ButtonComprable extends JButton {
 	    addMouseListener(new TooltipEnabler());
 	}
 
-	/**
-	 * Crea el comprable asociado al botón.
-	 * @param x - Coordenada x del objeto
-	 * @param y - Coordenada y del objeto
-	 */
+	
 	public abstract void crearComprable(int x, int y);	
 	
 	/**

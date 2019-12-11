@@ -7,9 +7,7 @@ import javax.swing.ImageIcon;
 import Tablero.Tablero;
 import Torres.TorreLadrillos;
 
-/**
- * Botón específico de la torre roja
- */
+
 public class BotonTorreLadrillos extends ButtonComprable { 
 	
 	/**

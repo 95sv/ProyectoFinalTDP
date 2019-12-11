@@ -10,11 +10,7 @@ import Mapa.Mapa;
  */
 public class Fuerte extends PowerUpTiempo {
 
-	/**
-	 * Crea un power-up.
-	 * @param x - La coordenada x del power-up
-	 * @param y - La coordenada y del power-up
-	 */
+	
 	public Fuerte(int x, int y) {
 		super(x, y);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Fuerza.png"));

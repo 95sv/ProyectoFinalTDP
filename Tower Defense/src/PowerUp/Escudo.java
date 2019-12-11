@@ -10,11 +10,7 @@ import Mapa.Mapa;
  */
 public class Escudo extends PowerUpTiempo {
 	
-	/**
-	 * Crea un power-up.
-	 * @param x - La coordenada x del power-up
-	 * @param y - La coordenada y del power-up
-	 */
+	
 	public Escudo(int x, int y) {
 		super(x, y);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/PowerUp/Escudo.png"));

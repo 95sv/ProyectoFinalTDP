@@ -5,9 +5,7 @@ import javax.swing.JLabel;
 
 import PowerUp.PowerUpInstantaneo;
 
-/**
- * Label utilizado para representar los power-up de efecto instantaneo.
- */
+
 public class LabelPowerUpInstantaneo extends JLabel {
 	
 	private PowerUpInstantaneo miPU;
