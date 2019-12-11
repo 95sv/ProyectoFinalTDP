@@ -31,28 +31,7 @@ public class Trampa extends ObjetoComprable {
 	public boolean aceptar(Visitor v) {
 		return v.visit(this);
 	}
-
-
-	public boolean visit(EnemigoCerca e) {
-		e.morir();
-		Tablero.getInstance().eliminarObjeto(this);
-		return false;
-	}
 	
-	public boolean visit(EnemigoLejos e) {
-		//SI ESTA PISANDO LA TRAMPA, ENTONCES SE ACTIVA (TRUE), SINO SIGUE CAMINANDO (FALSE)
-		if (Tablero.getInstance().getEntidad(x/Mapa.PIXEL-1, y/Mapa.PIXEL)==e) {
-			e.morir();
-			Tablero.getInstance().eliminarObjeto(this);
-			return true;
-		}
-		else {
-			return false;
-		}		
-	}
-	
-	public boolean visit(DisparoEnemigo e) {
-		return false;
-	}
+
 
 }

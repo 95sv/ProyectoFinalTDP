@@ -24,27 +24,27 @@ public class VisitorDisparoEnemigo extends Visitor{
 		return true;
 	}
 
-	@Override
+	
 	public boolean visit(DisparoEnemigo d) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
-	@Override
+	
 	public boolean visit(DisparoAliado d) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
-	@Override
+	
 	public boolean visit(EnemigoCerca e) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
-	@Override
+
 	public boolean visit(EnemigoLejos e) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 

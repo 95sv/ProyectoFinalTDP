@@ -4,12 +4,15 @@ import Disparo.DisparoAliado;
 import Disparo.DisparoEnemigo;
 import Enemigos.EnemigoCerca;
 import Enemigos.EnemigoLejos;
+import Hilos.HiloVeneno;
+import Mapa.Mapa;
 import Objeto.Agua;
 import Objeto.Barricada;
 import Objeto.Fuego;
 import Objeto.Piedra;
 import Objeto.Trampa;
 import Objeto.Veneno;
+import Tablero.Tablero;
 import Torres.Torre;
 
 public class VisitorEnemigoLejos extends Visitor{
@@ -51,14 +54,14 @@ public class VisitorEnemigoLejos extends Visitor{
 	
 	
 	public boolean visit(Agua a) {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
-	@Override
-	public boolean visit(Fuego f) {
 
-		if(e.getX()+100>f.getX()) {
-		   e.recibirDaño(f.getDaño());
+	public boolean visit(Fuego f) {
+		
+		if(f.getX()-e.getX()<=Mapa.PIXEL) {
+			e.recibirDaño(f.getDaño());
 		}
 		return false;
 	}
@@ -70,12 +73,19 @@ public class VisitorEnemigoLejos extends Visitor{
 	
 	
 	public boolean visit(Veneno v) {
-		// TODO Auto-generated method stub
+		if (v.getX()-e.getX()<=Mapa.PIXEL) {
+			HiloVeneno hv = new HiloVeneno();
+			hv.start();
+			v.morir();;
+		}
 		return false;
 	}
-	@Override
+
 	public boolean visit(Trampa t) {
-		// TODO Auto-generated method stub
+	    if(t.getX()-e.getX()<=Mapa.PIXEL) {
+	    	e.morir();
+	    	t.morir();
+	    }
 		return false;
 	}
 
