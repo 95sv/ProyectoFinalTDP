@@ -43,16 +43,5 @@ public abstract class Doble extends Torre {
 		mitad.actualizarVida(vida);
 	}
 	
-	public boolean visit(DisparoEnemigo d) {
-		boolean toReturn = super.aceptar(miVisitor);
-		mitad.actualizarVida(vida);
-		return toReturn;
-	}
-	
-	public boolean visit(EnemigoCerca e) {
-		boolean toReturn = super.aceptar(miVisitor);
-		mitad.actualizarVida(vida);
-		return toReturn;
-	}
 
 }

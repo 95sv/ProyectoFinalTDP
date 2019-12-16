@@ -3,6 +3,7 @@ package Torres;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import Mapa.Mapa;
+import Visitor.Visitor;
 
 /**
  * Parte inferior de la torre doble. La referencia de la otra mitad debe ser la parte superior de la torre.
@@ -22,5 +23,10 @@ public class DobleB extends Doble {
 		addLifeBar();
 		addPUEffect();
 	}	
+	
+	public boolean aceptar(Visitor v) {
+		
+		return v.visit(this);
+	}
 
 }

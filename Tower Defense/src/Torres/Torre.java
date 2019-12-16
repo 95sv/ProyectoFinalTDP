@@ -1,5 +1,8 @@
 package Torres;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 import EntidadesAbstractas.Entidad;
 import EntidadesAbstractas.Personaje;
 import Mapa.Mapa;
@@ -58,8 +61,5 @@ public abstract class Torre extends Personaje {
 	 */
 	protected abstract void crearDisparo();
 		
-	public void visit() {
-		Tablero.getInstance().vender(this);
-	}
 	
 }

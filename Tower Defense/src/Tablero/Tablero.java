@@ -414,14 +414,8 @@ public class Tablero {
 	 * Vende una torre del jugador, devolviendo la cantidad de monedas adecuadas al jugador.
 	 * @param j La torre a vender
 	 */
-	public void vender(Torre j) {
-		if (j.fullVida()) {
-			monedas += j.getValor();
-		}
-		else {
-			monedas += j.getValor()/2;
-		}
-		gui.actualizarPuntaje();
-		j.morir();
+	public void vender(Torre t) {
+		monedas += t.getValor();
+		gui.venderTorre(t);
 	}
 }
