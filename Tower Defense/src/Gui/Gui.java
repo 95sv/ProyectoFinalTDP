@@ -20,14 +20,11 @@ import Mapa.Mapa;
 import Tablero.Tablero;
 import Torres.Torre;
 
-/**
- * Clase encargada de manejar la interfaz gráfica
- */
+ //Clase encargada de manejar la interfaz gráfica
+ 
 public class Gui extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 	private JLabel background;
@@ -45,9 +42,9 @@ public class Gui extends JFrame {
 		ventana.setTitle("Tower Defense");
 	}
 
-	/**
-	 * Crea la gui.
-	 */
+	
+	 // Crea la gui.
+	
 	public Gui() {
 		// Se genera el contentPane
 		getContentPane().setLayout(null);
@@ -65,11 +62,9 @@ public class Gui extends JFrame {
 		cargarLogica();
 	}
 
-	/**
-	 * Crea todos los componentes gráficos del inventario, particularmente los
-	 * botones para crear torres y objetos, y otra información como puntaje y
-	 * monedas.
-	 */
+	
+	 // Crea todos los componentes gráficos del inventario.
+	 
 	private void cargarInventario() {
 		// Se crea el panel de inventario
 		JPanel inventario = new JPanel();
@@ -113,9 +108,7 @@ public class Gui extends JFrame {
 		
 	}
 
-	/**
-	 * Inicia la logica del juego.
-	 */
+
 	private void cargarLogica() {
 		// Logica e hilos
 		Tablero.getInstance().setGUI(this);
@@ -123,15 +116,7 @@ public class Gui extends JFrame {
 		Tablero.getInstance().crearHilos();
 	}
 
-	/**
-	 * Termina el nivel, mostrando un mensaje de para reiniciar o continuar al
-	 * siguiente nivel, dependiendo de si el usuario perdió o ganó respectivamente.
-	 * Si el usuario completó el último nivel, el juego terminará con una ventana
-	 * vacía.
-	 * 
-	 * @param ganaste - True si el usuario completó el nivel, false en caso
-	 *                contrario
-	 */
+	
 	public void gameOver(boolean ganaste) {
 		repaint();
 		JLabel lbl;
@@ -164,11 +149,7 @@ public class Gui extends JFrame {
 		});
 	}
 
-	/**
-	 * Cambia el fondo del mapa, para mostrar gráficamente el cambio de nivel.
-	 * 
-	 * @param m - El nivel del cual se toma el nuevo fondo
-	 */
+	
 	public void setBackground(Mapa m) {
 		if (m != null) {
 			background.setIcon(m.getIcon());
@@ -178,14 +159,7 @@ public class Gui extends JFrame {
 		repaint();
 	}
 
-	/**
-	 * Añade el gráfico de un objeto al mapa.
-	 * 
-	 * @param g    - El objeto graficable
-	 * @param capa - La capa donde se inserta el objeto. Se utiliza 1 para los
-	 *             objetos normales y 2 para los que deben ser visto por encima de
-	 *             los normales
-	 */
+	
 	public void crearGrafico(Graficable g, int capa) {
 		background.add(g.getLabel());
 		g.getLabel().setBounds(g.getX(), g.getY(), Mapa.PIXEL, Mapa.PIXEL);
@@ -194,18 +168,12 @@ public class Gui extends JFrame {
 		}
 	}
 
-	/**
-	 * Se elimina el gráfico de un objeto del mapa.
-	 * 
-	 * @param g - El objeto graficable
-	 */
+	
 	public void eliminarGrafico(Graficable g) {
 		background.remove(g.getLabel());
 	}
 
-	/**
-	 * Se actualiza el valor del puntaje y el de las monedas.
-	 */
+	
 	public void actualizarPuntaje() {
 		lblPuntaje.setText("Puntaje : " + Tablero.getInstance().getPuntaje());
 		lblMonedas.setText("Monedas : " + Tablero.getInstance().getMonedas());
@@ -219,7 +187,7 @@ public class Gui extends JFrame {
 	}
 	
 	private class VenderListener implements ActionListener{
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			if(torreVender != null) {
 				torreVender.morir();
@@ -229,9 +197,7 @@ public class Gui extends JFrame {
 
 	}
 	
-	/**
-	 * Prepara el mapa para crear un objeto comprable y guarda que boton se apretó.
-	 */
+	
 	private class ElegirComprableListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
@@ -243,11 +209,7 @@ public class Gui extends JFrame {
 		}
 	}
 
-	/**
-	 * Crea un nuevo jugador en base a las coordenadas del cursor si se hizo click
-	 * izquierdo en el mapa. Si se hace click derecho, elimina el objeto graficable
-	 * si es posible.
-	 */
+	
 	private class CrearEliminarComprableListener extends MouseAdapter {
 
 		public void mouseClicked(MouseEvent e) {

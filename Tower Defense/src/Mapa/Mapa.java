@@ -21,9 +21,7 @@ public abstract class Mapa {
 	protected Icon icon;
 	protected Celda celdas[][];	
 	
-	/**
-	 * Crea la base del mapa, que siempre es la misma sin importar el nivel.
-	 */
+	
 	protected Mapa() {
 		celdas = new Celda[10][6];
 		//La iteracion while es para evitar que se creen menos objetos de lo que se deberian crear
@@ -34,10 +32,7 @@ public abstract class Mapa {
 		}
 	}
 	
-	/**
-	 * Eliminar una entidad del mapa
-	 * @param e - La entidad a eliminar
-	 */
+	
 	public void eliminarEntidad(Entidad e) {
 		//Al mover los enemigos, existe la posibilidad de que cambie de posicion mientras se esta muriendo y se trata de eliminar
 		//la entidad en la celda incorrecta. Por eso, si la entidad no esta en la celda donde deberia estar por error, estara en la anterior (probablemente)
@@ -49,19 +44,13 @@ public abstract class Mapa {
 		}		
 	}
 
-	/**
-	 * Se añade una torre al mapa.
-	 * @param n - La torre a añadir 
-	 */
+	
 	public void setEntidad(Torre n) {
 		celdas[n.getX()/PIXEL][n.getY()/PIXEL].setEntidad(n);
 	}
 	
-	/**
-	 * Se añade un enemigo al mapa. Como los enemigos se mueven por el mapa, 
-	 * esta operación también se utilizar para actualizar la celda que ocupa dentro del mapa.
-	 * @param e - El enemigo a añadir o actualizar
-	 */
+	 // Se añade un enemigo al mapa. Como los enemigos se mueven por el mapa,esta operación también se utilizar para actualizar la celda que ocupa dentro del mapa.
+	
 	public void setEntidad(Enemigo e) {
 		if (e.getX()/PIXEL<celdas.length && e.getX()>=0) {
 			celdas[e.getX()/PIXEL][e.getY()/PIXEL].setEntidad(e);
@@ -71,35 +60,18 @@ public abstract class Mapa {
 		}	
 	}
 	
-	/**
-	 * Se añade un objeto al mapa.
-	 * @param o - El objeto a añadir 
-	 */
+	
 	public void setEntidad(Objeto o) {
 		celdas[o.getX()/PIXEL][o.getY()/PIXEL].setEntidad(o);
 	}
 	
-	/**
-	 * Retorna la entidad de la celda ubicada en las coordenadas pasadas por parámetro.
-	 * @param x - La coordenada x de la entidad
-	 * @param y - La coordeanda y de la entidad
-	 * @return La entidad ubicada en la celda
-	 */
 	public Entidad getEntidad(int x, int y) {
 		return celdas[x][y].getEntidad();
 	}
 	
-	/**
-	 * Cambia de nivel o reinicia el nivel actual, dependiendo de si el usuario ganó o perdió el nivel.
-	 * @param completado - True si se completó el nivel, false en caso contrario
-	 * @return El nuevo nivel
-	 */
 	public abstract Mapa cambiarNivel(boolean completado);
 	
-	/**
-	 * Retorna la imagen asociada al mapa.
-	 * @return La imagen asociada al mapa
-	 */
+
 	public Icon getIcon() {
 		return icon;
 	}

@@ -13,8 +13,6 @@ public abstract class Entidad extends Graficable{
 		super(x, y);
 	}
 	
-
-	
 	//La entidad es eliminada del tablero.
 	public abstract void morir();
 

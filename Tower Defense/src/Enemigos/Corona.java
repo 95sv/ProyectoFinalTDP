@@ -7,9 +7,7 @@ import Visitor.VisitorEnemigoCerca;
 
 public class Corona extends EnemigoCerca {
 
-	/**
-	 * Crea un enemigo Corona.
-	 */
+	 //Crea un enemigo Corona
 	
 	public Corona(int x, int y) {
 		super(x, y, 20, 5, 8, 10);

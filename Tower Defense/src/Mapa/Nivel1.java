@@ -9,14 +9,12 @@ import Objeto.Agua;
 import Objeto.Piedra;
 import Tablero.Tablero;
 
-/**
- * Mapa que representa el primer nivel del juego
- */
+
+ //Mapa que representa el primer nivel del juego
+
 public class Nivel1 extends Mapa {
 
-	/**
-	 * Crea el nivel
-	 */
+	
 	public Nivel1() {
 		super();
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Fondo1.jpg"));

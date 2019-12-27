@@ -6,24 +6,15 @@ import Tablero.Tablero;
 import Visitor.Visitor;
 import Visitor.VisitorEnemigoLejos;
 
-/**
- * Un tipo de enemigo que ataca de lejos. El daño que realiza es por disparo.
- */
+
+ // Un tipo de enemigo que ataca de lejos. El daño que realiza es por disparo.
+
 public abstract class EnemigoLejos extends Enemigo {
 
 	protected int alcance;
 	protected float cooldown;
 	
-	/**
-	 * Crea un enemigo.
-	 * @param x - La coordenada x del personaje
-	 * @param y - La coordenada y del personaje
-	 * @param maxVida - La vida maxima. Esta es la vida con la que empieza el personaje
-	 * @param daño - Daño por disparo
-	 * @param velocidad - La velocidad del personaje
-	 * @param valor - El valor del personaje. Puede ser el costo de compra o la recompensa por derrotarlo o venderlo.
-	 * @param alcance - El alcance del personaje, es decir, hasta cuantas celdas puede disparar.
-	 */
+
 	public EnemigoLejos(int x, int y, float maxVida, float daño, int velocidad, int valor, int alcance) {
 		super(x, y, maxVida, daño, velocidad, valor);
 		this.alcance = alcance;

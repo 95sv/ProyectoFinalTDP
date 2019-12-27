@@ -2,9 +2,9 @@ package Hilos;
 
 import Tablero.Tablero;
 
-/**
- * Hilo específico para el efecto del objeto Veneno.
- */
+
+ //Hilo específico para el efecto del objeto Veneno.
+ 
 public class HiloVeneno extends Thread {
 		
 	public void run() {

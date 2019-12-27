@@ -9,14 +9,10 @@ import Objeto.Agua;
 import Objeto.Piedra;
 import Tablero.Tablero;
 
-/**
- * Mapa que representa el segundo nivel del juego.
- */
+ //Mapa que representa el segundo nivel del juego.
+
 public class Nivel2 extends Mapa {
 
-	/**
-	 * Crea el nivel
-	 */
 	public Nivel2() {
 		super();
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Fondo2.jpg"));			

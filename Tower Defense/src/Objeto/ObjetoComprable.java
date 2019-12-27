@@ -1,8 +1,8 @@
 package Objeto;
 
-/**
- * Un tipo de objeto que el jugador puede comprar y ubicar en el mapa manualmente.
- */
+
+ // Un tipo de objeto que el jugador puede comprar y ubicar en el mapa manualmente.
+ 
 public abstract class ObjetoComprable extends Objeto {
 	
 	protected int costo;

@@ -7,9 +7,7 @@ import Visitor.VisitorEnemigoCerca;
 
 public class Hielo extends EnemigoCerca {	
 	
-	/**
-	 * Crea un enemigo Hielo.
-	 */
+	 //Crea un enemigo Hielo.
 	
 	public Hielo(int x, int y) {
 		super(x, y, 50, 10, 4, 20);

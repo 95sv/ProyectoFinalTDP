@@ -6,9 +6,9 @@ import Visitor.Visitor;
 import Visitor.VisitorTrampa;
 import Mapa.Mapa;
 
-/**
- * Objeto comprable que destruye el primer enemigo que lo toca.
- */
+
+ // Objeto comprable que destruye el primer enemigo que lo toca.
+ 
 public class Trampa extends ObjetoComprable {
 	
 	

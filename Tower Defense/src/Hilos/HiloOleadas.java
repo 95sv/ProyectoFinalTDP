@@ -2,28 +2,19 @@ package Hilos;
 
 import Tablero.Tablero;
 
-/**
- * Hilo que controla las oleadas de enemigos
- */
+
+ //Hilo que controla las oleadas de enemigos
+ 
 public class HiloOleadas extends Thread {
 
 	private boolean gameOver;
 	private int frozen;
 
-	/**
-	 * Esta operación se llama cuando se termina el juego y el hilo deber finalizar.
-	 */
 	public void gameOver() {
 		gameOver = true;
 	}
 
-	/**
-	 * Esta operación se llama cuando se quiere "pausar" el hilo. La operación run()
-	 * sigue ejecutándose, pero no va a realizar ninguna acción mientras el hilo
-	 * esté "pausado".
-	 * 
-	 * @param seg - Segundos que se pausa el hilo
-	 */
+	
 	public void frozen(int seg) {
 		frozen = seg;
 	}

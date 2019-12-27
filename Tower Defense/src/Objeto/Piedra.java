@@ -6,9 +6,9 @@ import Mapa.Mapa;
 import Visitor.Visitor;
 import Visitor.VisitorPiedra;
 
-/**
- * Obstáculo que impide el paso de los enemigos. Puede ser destruido por ataques.
- */
+
+ //Obstáculo que impide el paso de los enemigos. Puede ser destruido por ataques.
+
 public class Piedra extends Objeto {
 	
 	private float vida;

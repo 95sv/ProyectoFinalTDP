@@ -9,9 +9,8 @@ import Visitor.VisitorEnemigoLejos;
 
 public class Tierra extends EnemigoLejos {
 
-	/**
-	 * Crea un enemigo Tierra.
-	 */
+	 // Crea un enemigo Tierra.
+	
 	public Tierra(int x, int y) {
 		super(x, y, 50, 10, 4, 20, 3);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Tierra.gif"));

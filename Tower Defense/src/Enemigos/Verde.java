@@ -9,10 +9,8 @@ import Visitor.VisitorEnemigoLejos;
 
 public class Verde extends EnemigoLejos{
 
-	/**
-	 * Crea un enemigo verde.
-	 */
-	
+	 //Crea un enemigo verde.
+	 	
 	public Verde(int x, int y) {
 		super(x, y, 40, 10, 12, 15,3);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Verde.gif"));

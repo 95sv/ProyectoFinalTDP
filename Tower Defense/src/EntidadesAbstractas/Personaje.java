@@ -7,10 +7,10 @@ import Mapa.Mapa;
 import PowerUp.PowerUpTiempo;
 import Visitor.Visitor;
 
-/**
- * Clase que representa los personajes del juego, tanto las torres puestas por el jugador como los enemigos.
- * Los personajes son capaces de moverse y atacar.
- */
+
+ //Clase que representa los personajes del juego, tanto las torres puestas por el jugador como los enemigos.
+
+ 
 public abstract class Personaje extends Entidad {
 	
 	protected float maxVida;

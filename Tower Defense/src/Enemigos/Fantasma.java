@@ -7,9 +7,8 @@ import Visitor.VisitorEnemigoCerca;
 
 public class Fantasma extends EnemigoCerca {
 
-	/**
-	 * Crea un enemigo Fantasma.
-	 */
+	 //Crea un enemigo Fantasma.
+	
 	public Fantasma(int x, int y) {
 		super(x, y, 100, 20, 4, 50);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Fantasma.gif"));

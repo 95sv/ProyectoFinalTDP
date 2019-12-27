@@ -7,17 +7,11 @@ import Visitor.Visitor;
 import Visitor.VisitorVeneno;
 import Mapa.Mapa;
 
-/**
- * Objeto comprable que envenena a todos los enemigos cuando es tocado por un enemigo.
- *
- */
+ //Objeto comprable que envenena a todos los enemigos cuando es tocado por un enemigo.
+
 public class Veneno extends ObjetoComprable {
 
-	/**
-	 * Crea un objeto comprable
-	 * @param x - La coordenada x del objeto
-	 * @param y - La coordenada y del objeto
-	 */
+	
 	public Veneno(int x, int y) {
 		super(x, y, 20);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Veneno.png"));		

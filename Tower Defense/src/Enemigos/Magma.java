@@ -7,9 +7,7 @@ import Visitor.VisitorEnemigoCerca;
 
 public class Magma extends EnemigoCerca {
 
-	/**
-	 * Crea un enemigo Magma.
-	 */
+	 //Crea un enemigo Magma.
 	
 	public Magma(int x, int y) {
 		super(x, y, 250, 30, 2, 70);

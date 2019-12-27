@@ -5,23 +5,15 @@ import javax.swing.Icon;
 import EntidadesAbstractas.Personaje;
 import Tablero.Tablero;
 
-/**
- * Un tipo de personaje que es enemigo del jugador.
- */
+
+ //Un tipo de personaje que es enemigo del jugador.
+ 
 public abstract class Enemigo extends Personaje {
 	
 	protected Icon atacar;
 	protected Icon mover;
 	
-	/**
-	 * Crea un enemigo.
-	 * @param x - La coordenada x del personaje
-	 * @param y - La coordenada y del personaje
-	 * @param maxVida - La vida maxima. Esta es la vida con la que empieza el personaje
-	 * @param daño - Daño por segundo si ataca de cerca o por disparo si ataca de lejos
-	 * @param velocidad - La velocidad del personaje
-	 * @param valor - El valor del personaje. Puede ser el costo de compra o la recompensa por derrotarlo o venderlo.
-	 */
+
 	public Enemigo(int x, int y, float maxVida, float daño, int velocidad, int valor) {
 		super(x, y, maxVida, daño, velocidad, valor);
 	}
@@ -40,7 +32,7 @@ public abstract class Enemigo extends Personaje {
 	}
 	
 	public void visit() {
-		//No hay interaccion
+		
 	}
 	
 }
