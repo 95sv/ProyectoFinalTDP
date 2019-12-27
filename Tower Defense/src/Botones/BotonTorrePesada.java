@@ -8,6 +8,7 @@ import Tablero.Tablero;
 import Torres.TorrePesada;
 
 
+@SuppressWarnings("serial")
 public class BotonTorrePesada extends BotonComprable {
 
 	//Boton para comprar TorrePesada

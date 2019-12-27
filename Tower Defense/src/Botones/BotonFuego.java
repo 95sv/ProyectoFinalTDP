@@ -9,6 +9,7 @@ import Objeto.Fuego;
 import Tablero.Tablero;
 
 
+@SuppressWarnings("serial")
 public class BotonFuego extends BotonComprable {
 
 	//Boton para comprar Fuego

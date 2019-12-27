@@ -8,6 +8,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 
 
+@SuppressWarnings("serial")
 public abstract class BotonComprable extends JButton {
 	
 	//Clase generica para los botones de compra

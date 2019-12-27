@@ -3,14 +3,12 @@ package Torres;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import Disparo.DisparoPesado;
 import Mapa.Mapa;
 import Tablero.Tablero;
-import Torres.TorreControl.torreListener;
 import Visitor.Visitor;
 
 public class TorrePesada extends Torre {

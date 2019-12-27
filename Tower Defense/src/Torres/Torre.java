@@ -1,8 +1,5 @@
 package Torres;
 
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-
 import EntidadesAbstractas.Entidad;
 import EntidadesAbstractas.Personaje;
 import Mapa.Mapa;

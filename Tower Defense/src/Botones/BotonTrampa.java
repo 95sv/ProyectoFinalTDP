@@ -8,6 +8,7 @@ import Objeto.Trampa;
 import Tablero.Tablero;
 
 
+@SuppressWarnings("serial")
 public class BotonTrampa extends BotonComprable {
 
 	//Boton para comprar Trampa

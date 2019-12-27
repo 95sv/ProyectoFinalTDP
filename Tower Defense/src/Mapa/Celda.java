@@ -17,6 +17,10 @@ public class Celda {
 		miMapa = m;
 	}
 	
+	public Mapa getMapa() {
+		return miMapa;
+	}
+	
 	/**
 	 * Crea una celda con una entidad
 	 * @param m - El mapa que contiene esta celda

@@ -6,6 +6,7 @@ import javax.swing.JLabel;
 import PowerUp.PowerUpTiempo;
 
 
+@SuppressWarnings("serial")
 public class LabelPowerUpTiempo extends JLabel {
 	
 	protected PowerUpTiempo miPU;

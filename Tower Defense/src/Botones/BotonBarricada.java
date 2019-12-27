@@ -5,6 +5,7 @@ import javax.swing.ImageIcon;
 import Objeto.Barricada;
 import Tablero.Tablero;
 
+@SuppressWarnings("serial")
 public class BotonBarricada extends BotonComprable {
 
 	//Boton para comprar Barricada

@@ -8,6 +8,7 @@ import Tablero.Tablero;
 import Torres.TorreRoca;
 
 
+@SuppressWarnings("serial")
 public class BotonTorreRoca extends BotonComprable {
 	
 	//Boton para comprar TorreRoca

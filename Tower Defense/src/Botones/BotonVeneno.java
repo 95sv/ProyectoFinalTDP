@@ -8,6 +8,7 @@ import Objeto.Veneno;
 import Tablero.Tablero;
 
 
+@SuppressWarnings("serial")
 public class BotonVeneno extends BotonComprable {
 
 	//Boton para comprar Veneno

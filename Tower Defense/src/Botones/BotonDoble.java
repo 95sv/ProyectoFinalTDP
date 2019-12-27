@@ -11,6 +11,7 @@ import Torres.DobleA;
 import Torres.DobleB;
 
 
+@SuppressWarnings("serial")
 public class BotonDoble extends BotonComprable {
 
 	//Boton para comprar TorreDoble

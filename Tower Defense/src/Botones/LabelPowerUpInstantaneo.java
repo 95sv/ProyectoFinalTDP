@@ -6,6 +6,7 @@ import javax.swing.JLabel;
 import PowerUp.PowerUpInstantaneo;
 
 
+@SuppressWarnings("serial")
 public class LabelPowerUpInstantaneo extends JLabel {
 	
 	private PowerUpInstantaneo miPU;

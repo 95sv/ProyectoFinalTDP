@@ -1,8 +1,6 @@
 package Torres;
 
 import Disparo.DisparoArena;
-import Disparo.DisparoEnemigo;
-import Enemigos.EnemigoCerca;
 import Tablero.Tablero;
 
 /**
