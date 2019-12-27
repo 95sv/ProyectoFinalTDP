@@ -53,7 +53,6 @@ public class VisitorEnemigoLejos extends Visitor {
 	}
 
 	public boolean visit(Agua a) {
-
 		return false;
 	}
 

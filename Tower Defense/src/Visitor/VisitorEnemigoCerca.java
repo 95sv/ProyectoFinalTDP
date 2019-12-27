@@ -21,6 +21,7 @@ public class VisitorEnemigoCerca extends Visitor {
 	}
 
 	public boolean visit(Torre t) {
+		t.recibirDaño(e.getDaño());
 		return true;
 	}
 

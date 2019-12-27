@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 import Mapa.Mapa;
 
 /**
- * Disparo específico de la torre verde
+ * Disparo específico de la torre Control
  */
 public class DisparoControl extends DisparoAliado {
 

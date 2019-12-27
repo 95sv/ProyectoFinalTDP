@@ -5,9 +5,9 @@ import javax.swing.JLabel;
 
 import Mapa.Mapa;
 
-/**
- * Disparo específico del elfo.
- */
+
+  //Disparo específico del enemigo tierra.
+ 
 public class DisparoTierra extends DisparoEnemigo {
 
 

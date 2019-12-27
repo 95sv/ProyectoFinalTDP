@@ -49,7 +49,6 @@ public abstract class EnemigoLejos extends Enemigo {
 				}
 				else {
 					e = Tablero.getInstance().getEntidad(x/Mapa.PIXEL+1, y/Mapa.PIXEL); //Entidad de la celda siguiente
-					if (e==null) {
 						if (miPU!=null) {
 							x+= miPU.getVelocidad(velocidad);
 						}
@@ -58,10 +57,6 @@ public abstract class EnemigoLejos extends Enemigo {
 						}			
 						jl.setBounds(x, y, Mapa.PIXEL, Mapa.PIXEL);	
 						jl.setIcon(mover);
-					}	
-					else {
-						jl.setIcon(icon);
-					}
 				}
 			}
 			else {

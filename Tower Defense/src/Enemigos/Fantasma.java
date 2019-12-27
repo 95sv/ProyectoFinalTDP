@@ -10,7 +10,7 @@ public class Fantasma extends EnemigoCerca {
 	 //Crea un enemigo Fantasma.
 	
 	public Fantasma(int x, int y) {
-		super(x, y, 100, 20, 4, 50);
+		super(x, y, 100, 8, 4, 50);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Fantasma.gif"));
 		atacar = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/FantasmaAtaque.gif"));
 		mover = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Fantasma.gif"));
