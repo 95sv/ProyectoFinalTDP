@@ -6,9 +6,8 @@ import Mapa.Mapa;
 import Visitor.Visitor;
 import Visitor.VisitorBarricada;
 
-/**
- * Obstáculo comprable que impide el paso de los enemigos. Puede ser destruido por ataques.
- */
+ //Obstáculo comprable que impide el paso de los enemigos. Puede ser destruido por ataques.
+ 
 public class Barricada extends ObjetoComprable {
 
 	private float vida;

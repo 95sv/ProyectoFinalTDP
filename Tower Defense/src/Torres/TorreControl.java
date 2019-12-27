@@ -7,19 +7,15 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import Disparo.DisparoVerde;
+import Disparo.DisparoControl;
 import Mapa.Mapa;
 import Tablero.Tablero;
 import Visitor.Visitor;
 
 public class TorreControl extends Torre {
 
-	/**
-	 * Crea una torre verde.
-	 * 
-	 * @param x - La coordenada x de la torre
-	 * @param y - La coordenada y de la torre
-	 */
+	  //Crea una Torre Control.
+	
 	public TorreControl(int x, int y) {
 		super(x, y, 60, 15, 10, 45);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/TorreControl.png"));
@@ -38,9 +34,9 @@ public class TorreControl extends Torre {
 	protected void crearDisparo() {
 		if (miPU != null) {
 			Tablero.getInstance()
-					.crearDisparo(new DisparoVerde(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
+					.crearDisparo(new DisparoControl(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
 		} else {
-			Tablero.getInstance().crearDisparo(new DisparoVerde(x, y, daño, velocidad));
+			Tablero.getInstance().crearDisparo(new DisparoControl(x, y, daño, velocidad));
 		}
 	}
 	

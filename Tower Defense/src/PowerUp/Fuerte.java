@@ -5,9 +5,9 @@ import javax.swing.ImageIcon;
 import Botones.LabelPowerUpTiempo;
 import Mapa.Mapa;
 
-/**
- * Power-up que hace que el personaje afectado haga mas daño.
- */
+
+ //Power-up que hace que el personaje afectado haga mas daño.
+ 
 public class Fuerte extends PowerUpTiempo {
 
 	

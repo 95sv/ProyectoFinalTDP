@@ -6,10 +6,9 @@ import Botones.LabelPowerUpInstantaneo;
 import Tablero.Tablero;
 import Mapa.Mapa;
 
-/**
- * Power-up que destruye los enemigos de la fila donde está ubicado
- */
-public class Bomba extends PowerUpInstantaneo {
+ //Power-up que destruye los enemigos de la fila donde está ubicado
+ 
+ public class Bomba extends PowerUpInstantaneo {
 	
 
 	public Bomba(int x, int y) {

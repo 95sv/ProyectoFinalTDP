@@ -5,16 +5,14 @@ import javax.swing.ImageIcon;
 import Objeto.Barricada;
 import Tablero.Tablero;
 
-public class ButtonBarricada extends ButtonComprable {
+public class BotonBarricada extends BotonComprable {
 
-	/**
-	 * Crea un botón comprable.
-	 * @param al El ActionListener asociado al botón
-	 */
-	public ButtonBarricada(ActionListener al) {
+	//Boton para comprar Barricada
+	
+	public BotonBarricada(ActionListener al) {
 		super(al);
         setIcon(new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Barricada.png")));
-       // setToolTipText("<html> Barricada <br> Obstaculo destructible <br> Vida: C <br> Costo: 15 </html>");
+
 	}	
 	
 	public void crearComprable(int x, int y) {

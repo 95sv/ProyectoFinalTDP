@@ -15,12 +15,8 @@ import Visitor.Visitor;
 
 public class TorrePesada extends Torre {
 
-	/**
-	 * Crea una torre pesada.
-	 * 
-	 * @param x - La coordenada x de la torre
-	 * @param y - La coordenada y de la torre
-	 */
+	//Crea una Torre Pesada
+	
 	public TorrePesada(int x, int y) {
 		super(x, y, 150, 20, 6, 45);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/Pesada.png"));

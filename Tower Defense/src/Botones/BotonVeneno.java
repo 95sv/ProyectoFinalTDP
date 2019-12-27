@@ -8,16 +8,14 @@ import Objeto.Veneno;
 import Tablero.Tablero;
 
 
-public class ButtonVeneno extends ButtonComprable {
+public class BotonVeneno extends BotonComprable {
 
-	/**
-	 * Crea un botón comprable.
-	 * @param al El ActionListener asociado al botón
-	 */
-	public ButtonVeneno(ActionListener al) {
+	//Boton para comprar Veneno
+	
+	public BotonVeneno(ActionListener al) {
 		super(al);
         setIcon(new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Veneno.png")));
-        setToolTipText("<html> Veneno <br> Se activa con contacto enemigo <br> Daño: C <br> Tiempo: 5 seg <br> Costo: 20 </html>");
+        
 	}	
 	
 	public void crearComprable(int x, int y) {

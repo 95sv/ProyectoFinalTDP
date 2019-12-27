@@ -6,9 +6,9 @@ import Botones.LabelPowerUpInstantaneo;
 import Tablero.Tablero;
 import Mapa.Mapa;
 
-/**
- * Power-up que recupera la vida de todas las torres del jugador.
- */
+
+ //Power-up que recupera la vida de todas las torres del jugador.
+ 
 public class Vida extends PowerUpInstantaneo {
 
 	

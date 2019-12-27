@@ -7,18 +7,15 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import Disparo.DisparoRojo;
+import Disparo.DisparoLadrillo;
 import Mapa.Mapa;
 import Tablero.Tablero;
 import Visitor.Visitor;
 
 public class TorreLadrillos extends Torre {
 	
-	/**
-	 * Crea una torre roja.
-	 * @param x - La coordenada x de la torre
-	 * @param y - La coordenada y de la torre
-	 */
+	//Crea una Torre Ladrillo
+	
 	public TorreLadrillos(int x, int y) {
 		super(x, y, 20, 30, 14, 50);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/TorreLadrillos.png"));
@@ -37,10 +34,10 @@ public class TorreLadrillos extends Torre {
 	
 	protected void crearDisparo() {
 		if (miPU!=null) {
-			Tablero.getInstance().crearDisparo(new DisparoRojo(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
+			Tablero.getInstance().crearDisparo(new DisparoLadrillo(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
 		}
 		else {
-			Tablero.getInstance().crearDisparo(new DisparoRojo(x, y, daño, velocidad));
+			Tablero.getInstance().crearDisparo(new DisparoLadrillo(x, y, daño, velocidad));
 		}	
 	}
 	

@@ -1,6 +1,6 @@
 package Torres;
 
-import Disparo.DisparoBasico;
+import Disparo.DisparoArena;
 import Disparo.DisparoEnemigo;
 import Enemigos.EnemigoCerca;
 import Tablero.Tablero;
@@ -20,10 +20,10 @@ public abstract class Doble extends Torre {
 
 	protected void crearDisparo() {
 		if (miPU!=null) {
-			Tablero.getInstance().crearDisparo(new DisparoBasico(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
+			Tablero.getInstance().crearDisparo(new DisparoArena(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
 		}
 		else {
-			Tablero.getInstance().crearDisparo(new DisparoBasico(x, y, daño, velocidad));
+			Tablero.getInstance().crearDisparo(new DisparoArena(x, y, daño, velocidad));
 		}	
 	}
 	

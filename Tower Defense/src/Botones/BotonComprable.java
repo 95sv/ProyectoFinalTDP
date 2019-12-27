@@ -8,13 +8,11 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 
 
-public abstract class ButtonComprable extends JButton {
+public abstract class BotonComprable extends JButton {
 	
-	/**
-	 * Crea un botón comprable.
-	 * @param al El ActionListener asociado al botón
-	 */
-	public ButtonComprable(ActionListener al) {
+	//Clase generica para los botones de compra
+	
+	public BotonComprable(ActionListener al) {
 		super();
 		setBorder(null);
 	    setContentAreaFilled(false);

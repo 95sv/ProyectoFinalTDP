@@ -7,7 +7,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import Disparo.DisparoAzul;
+import Disparo.DisparoRoca;
 import Mapa.Mapa;
 import Tablero.Tablero;
 import Torres.TorrePesada.torreListener;
@@ -15,12 +15,9 @@ import Visitor.Visitor;
 
 public class TorreRoca extends Torre {
 
-	/**
-	 * Crea una torre azul.
-	 * 
-	 * @param x - La coordenada x de la torre
-	 * @param y - La coordenada y de la torre
-	 */
+	
+	//Crea una TorreRoca
+	
 	public TorreRoca(int x, int y) {
 		super(x, y, 30, 15, 10, 35);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/TorreRoca.png"));
@@ -38,9 +35,9 @@ public class TorreRoca extends Torre {
 
 	protected void crearDisparo() {
 		if (miPU != null) {
-			Tablero.getInstance().crearDisparo(new DisparoAzul(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
+			Tablero.getInstance().crearDisparo(new DisparoRoca(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
 		} else {
-			Tablero.getInstance().crearDisparo(new DisparoAzul(x, y, daño, velocidad));
+			Tablero.getInstance().crearDisparo(new DisparoRoca(x, y, daño, velocidad));
 		}
 	}
 	

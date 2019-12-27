@@ -6,16 +6,14 @@ import Tablero.Tablero;
 import Torres.TorreControl;
 
 
-public class BotonTorreControl extends ButtonComprable {
+public class BotonTorreControl extends BotonComprable {
 	
-	/**
-	 * Crea un botón comprable.
-	 * @param al El ActionListener asociado al botón
-	 */
+	//Boton para comprar TorreControl
+	
 	public BotonTorreControl(ActionListener al) {
 		super(al);
         setIcon(new ImageIcon(this.getClass().getResource("/Recursos/Torres/TorreControl.png")));
-        //setToolTipText("<html> Torre Verde <br> Daño: B <br> Velocidad: B <br> Vida: B <br> Costo: 45 </html");
+       
 	}
 
 	public void crearComprable(int x, int y) {

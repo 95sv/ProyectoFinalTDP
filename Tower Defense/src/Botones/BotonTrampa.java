@@ -8,16 +8,14 @@ import Objeto.Trampa;
 import Tablero.Tablero;
 
 
-public class ButtonTrampa extends ButtonComprable {
+public class BotonTrampa extends BotonComprable {
 
-	/**
-	 * Crea un botón comprable.
-	 * @param al El ActionListener asociado al botón
-	 */
-	public ButtonTrampa(ActionListener al) {
+	//Boton para comprar Trampa
+	
+	public BotonTrampa(ActionListener al) {
 		super(al);
         setIcon(new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Trampa.png")));
-       // setToolTipText("<html> Trampa <br> Mata a quien lo toque <br> Costo: 60 </html>");        
+       
 	}	
 	
 	public void crearComprable(int x, int y) {

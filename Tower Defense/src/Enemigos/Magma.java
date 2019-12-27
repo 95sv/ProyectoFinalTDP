@@ -8,10 +8,9 @@ import Visitor.VisitorEnemigoCerca;
 public class Magma extends EnemigoCerca {
 
 	/**
-	 * Crea un troll.
-	 * @param x - La coordenada x del enemigo
-	 * @param y - La coordenada y del enemigo
+	 * Crea un enemigo Magma.
 	 */
+	
 	public Magma(int x, int y) {
 		super(x, y, 250, 30, 2, 70);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Magma.gif"));

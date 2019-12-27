@@ -10,11 +10,7 @@ import Visitor.Visitor;
  */
 public class DobleB extends Doble {
 	
-	/**
-	 * Crea la parte inferior de la torre doble.
-	 * @param x - La coordenada x de la torre
-	 * @param y - La coordenada y de la torre
-	 */
+	
 	public DobleB(int x, int y) {
 		super(x, y, 50, 10, 8, 0);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/TorreDobleB.png"));

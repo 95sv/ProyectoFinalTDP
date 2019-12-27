@@ -7,19 +7,16 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import Disparo.DisparoBasico;
+import Disparo.DisparoArena;
 import Mapa.Mapa;
 import Tablero.Tablero;
 import Visitor.Visitor;
 
 public class TorreArena extends Torre {
 
-	/**
-	 * Crea una torre básica.
-	 * 
-	 * @param x - La coordenada x de la torre
-	 * @param y - La coordenada y de la torre
-	 */
+	
+	 //Crea una Torre Arena.
+	
 	public TorreArena(int x, int y) {
 		super(x, y, 50, 10, 8, 30);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Torres/TorreArena.png"));
@@ -38,9 +35,9 @@ public class TorreArena extends Torre {
 	protected void crearDisparo() {
 		if (miPU != null) {
 			Tablero.getInstance()
-					.crearDisparo(new DisparoBasico(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
+					.crearDisparo(new DisparoArena(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad)));
 		} else {
-			Tablero.getInstance().crearDisparo(new DisparoBasico(x, y, daño, velocidad));
+			Tablero.getInstance().crearDisparo(new DisparoArena(x, y, daño, velocidad));
 		}
 	}
 

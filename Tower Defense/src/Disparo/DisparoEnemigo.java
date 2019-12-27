@@ -10,6 +10,7 @@ import Visitor.VisitorDisparoEnemigo;
  * Un tipo de disparo que solo es lanzado por los enemigos. 
  * Estos disparos afectan a las torres del jugador y a algunos obstáculos.
  */
+
 public abstract class DisparoEnemigo extends Disparo {
 
 	public DisparoEnemigo(int x, int y, float daño, int velocidad) {

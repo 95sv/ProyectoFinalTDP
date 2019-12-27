@@ -13,11 +13,7 @@ public abstract class Graficable {
 	protected JLabel jl;	
 	protected Icon icon;
 
-	/**
-	 * Crea un objeto graficable en la posición dada por parámetro.
-	 * @param x - La coordenada x del objeto
-	 * @param y - La coordenada y del objeto
-	 */
+	
 	public Graficable(int x, int y) {
 		this.x = x;
 		this.y = y;

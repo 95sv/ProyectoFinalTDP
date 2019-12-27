@@ -9,16 +9,14 @@ import Objeto.Fuego;
 import Tablero.Tablero;
 
 
-public class ButtonFuego extends ButtonComprable {
+public class BotonFuego extends BotonComprable {
 
-	/**
-	 * Crea un botón comprable.
-	 * @param al El ActionListener asociado al botón
-	 */
-	public ButtonFuego(ActionListener al) {
+	//Boton para comprar Fuego
+	
+	public BotonFuego(ActionListener al) {// dura 5 segundos
 		super(al);
 		setIcon(new ImageIcon(this.getClass().getResource("/Recursos/ObjetosComprables/Fuego.gif")));
-		//setToolTipText("<html> Fuego <br> Obstaculo indestructible que daña a quien lo toque <br> Daño: C <br> Tiempo: 5 seg <br> Costo: 20 </html>");
+		
 	}
 
 	public void crearComprable(int x, int y) {

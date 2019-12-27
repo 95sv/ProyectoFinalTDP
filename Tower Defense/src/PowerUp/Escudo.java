@@ -5,9 +5,8 @@ import javax.swing.ImageIcon;
 import Botones.LabelPowerUpTiempo;
 import Mapa.Mapa;
 
-/**
- * Power-up que hace invulnerable al peronsaje que lo afecta.
- */
+ //Power-up que hace invulnerable al peronsaje que lo afecta.
+ 
 public class Escudo extends PowerUpTiempo {
 	
 	

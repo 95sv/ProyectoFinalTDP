@@ -5,9 +5,9 @@ import javax.swing.ImageIcon;
 import Botones.LabelPowerUpTiempo;
 import Mapa.Mapa;
 
-/**
- * Power-up que hace a un personaje más rápido el movimiento y/o la velocida de su disparo.
- */
+
+ //Power-up que hace a un personaje más rápido el movimiento y/o la velocida de su disparo.
+ 
 public class Velocidad extends PowerUpTiempo {
 
 

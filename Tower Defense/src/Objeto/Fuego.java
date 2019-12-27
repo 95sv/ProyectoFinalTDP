@@ -6,9 +6,9 @@ import Mapa.Mapa;
 import Visitor.Visitor;
 import Visitor.VisitorFuego;
 
-/**
- * Obstáculo comprable temporal que daña al enemigo mas cercano. 
- */
+
+  //Obstáculo comprable temporal que daña al enemigo mas cercano. 
+ 
 public class Fuego extends ObjetoComprable {
 	
 	private float daño;
@@ -26,7 +26,7 @@ public class Fuego extends ObjetoComprable {
 		return daño;
 	}
 
-	@Override
+	
 	public boolean aceptar(Visitor v) {
 		return v.visit(this);
 	}

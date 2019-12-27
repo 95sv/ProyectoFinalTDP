@@ -8,16 +8,14 @@ import Tablero.Tablero;
 import Torres.TorrePesada;
 
 
-public class ButtonAvanzada extends ButtonComprable {
+public class BotonTorrePesada extends BotonComprable {
 
-	/**
-	 * Crea un botón comprable.
-	 * @param al El ActionListener asociado al botón
-	 */
-	public ButtonAvanzada(ActionListener al) {
+	//Boton para comprar TorrePesada
+	
+	public BotonTorrePesada(ActionListener al) {
 		super(al);
         setIcon(new ImageIcon(this.getClass().getResource("/Recursos/Torres/Pesada.png")));
-        //setToolTipText("<html> Torre Pesada <br> Daño: B <br> Velocidad: D <br> Vida: A+ <br> Costo: 45 </html");
+       
 	}
 	
 	public void crearComprable(int x, int y) {

@@ -25,7 +25,7 @@ public class Nivel1 extends Mapa {
 		int y;
 		int lago = 0;
 		int piedra = 0;
-		while (lago<3) {
+		while (lago<8) {
 			x = rnd.nextInt(6) + 2; //Entre 2 y 7
 			y = rnd.nextInt(6);
 			if (celdas[x][y].getEntidad()==null) {				

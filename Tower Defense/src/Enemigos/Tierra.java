@@ -10,9 +10,7 @@ import Visitor.VisitorEnemigoLejos;
 public class Tierra extends EnemigoLejos {
 
 	/**
-	 * Crea un elfo.
-	 * @param x - La coordenada x del enemigo
-	 * @param y - La coordenada y del enemigo
+	 * Crea un enemigo Tierra.
 	 */
 	public Tierra(int x, int y) {
 		super(x, y, 50, 10, 4, 20, 3);

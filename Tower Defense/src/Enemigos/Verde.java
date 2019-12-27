@@ -10,10 +10,9 @@ import Visitor.VisitorEnemigoLejos;
 public class Verde extends EnemigoLejos{
 
 	/**
-	 * Crea una amazona.
-	 * @param x - La coordenada x del enemigo
-	 * @param y - La coordenada y del enemigo
+	 * Crea un enemigo verde.
 	 */
+	
 	public Verde(int x, int y) {
 		super(x, y, 40, 10, 12, 15,3);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Verde.gif"));
@@ -27,7 +26,7 @@ public class Verde extends EnemigoLejos{
 		miVisitor = new VisitorEnemigoLejos(this);
 	}
 
-	@Override
+
 	protected void crearDisparo() {
 		if (miPU!=null) {
 			Tablero.getInstance().crearDisparo(new DisparoTierra(x, y, miPU.getDaño(daño), miPU.getVelocidad(velocidad*2)));

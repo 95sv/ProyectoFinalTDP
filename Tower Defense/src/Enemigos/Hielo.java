@@ -8,10 +8,9 @@ import Visitor.VisitorEnemigoCerca;
 public class Hielo extends EnemigoCerca {	
 	
 	/**
-	 * Crea un paladín.
-	 * @param x - La coordenada x del enemigo
-	 * @param y - La coordenada y del enemigo
+	 * Crea un enemigo Hielo.
 	 */
+	
 	public Hielo(int x, int y) {
 		super(x, y, 50, 10, 4, 20);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Hielo.gif"));

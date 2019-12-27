@@ -11,16 +11,14 @@ import Torres.DobleA;
 import Torres.DobleB;
 
 
-public class ButtonDoble extends ButtonComprable {
+public class BotonDoble extends BotonComprable {
 
-	/**
-	 * Crea un botón comprable.
-	 * @param al El ActionListener asociado al botón
-	 */
-	public ButtonDoble(ActionListener al) {
+	//Boton para comprar TorreDoble
+	
+	public BotonDoble(ActionListener al) {
 		super(al);
 		setIcon(new ImageIcon(this.getClass().getResource("/Recursos/Torres/Doble.png")));
-		//setToolTipText("<html> Doble <br> Torre que ocupa dos espacios <br> Daño: C <br> Velocidad: C <br> Vida: C <br> Costo: 50</html>");
+		
 	}
 
 	public void crearComprable(int x, int y) {

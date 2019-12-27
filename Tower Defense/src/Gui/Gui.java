@@ -32,7 +32,7 @@ public class Gui extends JFrame {
 
 	private JLabel background;
 
-	private ButtonComprable torreElegida;
+	private BotonComprable torreElegida;
 	private Torre torreVender;
 	private JButton btnVender;
 	
@@ -86,15 +86,15 @@ public class Gui extends JFrame {
 
 		// Se crean los botones de torres y comprables
 		inventario.add(new BotonTorreArena(new ElegirComprableListener()));
-		inventario.add(new ButtonAvanzada(new ElegirComprableListener()));
+		inventario.add(new BotonTorrePesada(new ElegirComprableListener()));
 		inventario.add(new BotonTorreControl(new ElegirComprableListener()));
 		inventario.add(new BotonTorreLadrillos(new ElegirComprableListener()));
 		inventario.add(new BotonTorreRoca(new ElegirComprableListener()));
-		inventario.add(new ButtonDoble(new ElegirComprableListener()));
-		inventario.add(new ButtonBarricada(new ElegirComprableListener()));
-		inventario.add(new ButtonTrampa(new ElegirComprableListener()));
-		inventario.add(new ButtonVeneno(new ElegirComprableListener()));
-		inventario.add(new ButtonFuego(new ElegirComprableListener()));
+		inventario.add(new BotonDoble(new ElegirComprableListener()));
+		inventario.add(new BotonBarricada(new ElegirComprableListener()));
+		inventario.add(new BotonTrampa(new ElegirComprableListener()));
+		inventario.add(new BotonVeneno(new ElegirComprableListener()));
+		inventario.add(new BotonFuego(new ElegirComprableListener()));
 
 		// Puntaje y monedas
 		lblPuntaje = new JLabel("Puntaje: " + Tablero.getInstance().getPuntaje());
@@ -238,7 +238,7 @@ public class Gui extends JFrame {
 			if (torreElegida != null) {
 				torreElegida.setBorder(null);
 			}
-			torreElegida = (ButtonComprable) e.getSource();
+			torreElegida = (BotonComprable) e.getSource();
 			torreElegida.setBorder(BorderFactory.createLineBorder(Color.BLUE));
 		}
 	}

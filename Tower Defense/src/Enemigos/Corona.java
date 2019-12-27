@@ -8,10 +8,9 @@ import Visitor.VisitorEnemigoCerca;
 public class Corona extends EnemigoCerca {
 
 	/**
-	 * Crea un caballero.
-	 * @param x - La coordenada x del enemigo
-	 * @param y - La coordenada y del enemigo
+	 * Crea un enemigo Corona.
 	 */
+	
 	public Corona(int x, int y) {
 		super(x, y, 20, 5, 8, 10);
 		icon = new ImageIcon(this.getClass().getResource("/Recursos/Enemigos/Corona.gif"));

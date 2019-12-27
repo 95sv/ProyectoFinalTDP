@@ -6,9 +6,8 @@ import Botones.LabelPowerUpInstantaneo;
 import Mapa.Mapa;
 import Tablero.Tablero;
 
-/**
- * Power-up que congela por un tiempo a los enemigos.
- */
+  //Power-up que congela por un tiempo a los enemigos.
+
 public class Congelar extends PowerUpInstantaneo {
 
 	
