@@ -24,12 +24,8 @@ public abstract class BotonComprable extends JButton {
 	
 	public abstract void crearComprable(int x, int y);	
 	
-	/**
-	 * Clase utilizada para mostrar el tooltip cuando el cursor pase por encima del botón.
-	 */
 	private class TooltipEnabler extends MouseAdapter {
 		
-		//Simula Control+F1 para activar el Tooltip. Probablemente solo funcione en Windows
 		public void mouseEntered(MouseEvent e) {
 			KeyEvent ke = new KeyEvent(e.getComponent(), KeyEvent.KEY_PRESSED,
                     System.currentTimeMillis(), InputEvent.CTRL_MASK,
